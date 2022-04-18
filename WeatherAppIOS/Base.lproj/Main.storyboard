@@ -91,8 +91,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-i8-JaO">
+                                <rect key="frame" x="32" y="94" width="350" height="180.5"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-ZV-HIO">
-                                <rect key="frame" x="100" y="177" width="214" height="50.5"/>
+                                <rect key="frame" x="100" y="274.5" width="214" height="50.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONDON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="28.5"/>
@@ -108,61 +113,48 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 °" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wF-bMZ">
-                                <rect key="frame" x="32" y="325" width="60.5" height="59.5"/>
-                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="50"/>
-                                <color key="textColor" name="PrimaryColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-i8-JaO">
-                                <rect key="frame" x="32" y="94" width="350" height="51"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7s-hc-bT2">
-                                <rect key="frame" x="264" y="267.5" width="80" height="80"/>
-                                <color key="backgroundColor" name="RedCircle"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="By0-q9-kTT"/>
-                                    <constraint firstAttribute="height" constant="80" id="g3s-J5-oQt"/>
-                                </constraints>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-HF-nFr">
-                                <rect key="frame" x="234" y="262.5" width="120" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="ezH-pC-aI1"/>
-                                    <constraint firstAttribute="height" constant="120" id="rzi-84-Fdf"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLy-m5-g3L">
-                                <rect key="frame" x="32" y="267.5" width="130" height="47.5"/>
-                                <fontDescription key="fontDescription" name="Rubik-ExtraBold" family="Rubik" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="iya-ci-wzB">
+                                <rect key="frame" x="32" y="345" width="350" height="117"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i1L-AR-CNN">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="117"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLy-m5-g3L">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="Rubik-ExtraBold" family="Rubik" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 °" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wF-bMZ">
+                                                <rect key="frame" x="0.0" y="57.5" width="60.5" height="59.5"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="50"/>
+                                                <color key="textColor" name="PrimaryColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-HF-nFr">
+                                        <rect key="frame" x="200" y="0.0" width="150" height="117"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eLe-T6-NYp"/>
-                        <color key="backgroundColor" name="Background"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eLy-m5-g3L" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="3DS-gZ-J3q"/>
+                            <constraint firstItem="iya-ci-wzB" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="3T1-2N-2yt"/>
+                            <constraint firstAttribute="trailing" secondItem="iya-ci-wzB" secondAttribute="trailing" constant="32" id="5B0-Lx-tfq"/>
                             <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="8Yx-i8-JaO" secondAttribute="trailing" constant="32" id="8aS-ZS-MYa"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="bottom" secondItem="iya-ci-wzB" secondAttribute="bottom" constant="400" id="IsD-IM-Ohk"/>
                             <constraint firstItem="8Yx-i8-JaO" firstAttribute="top" secondItem="eLe-T6-NYp" secondAttribute="top" constant="50" id="QIr-BG-T2h"/>
                             <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="cGx-ZV-HIO" secondAttribute="trailing" constant="100" id="ac1-DG-Ukm"/>
-                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" constant="32" id="fAT-Pc-QuA"/>
+                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" symbolic="YES" id="fAT-Pc-QuA"/>
                             <constraint firstItem="cGx-ZV-HIO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="100" id="i8F-CY-hxJ"/>
-                            <constraint firstItem="Ay2-wF-bMZ" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="iFI-gL-7Gu"/>
-                            <constraint firstItem="J7s-hc-bT2" firstAttribute="top" secondItem="cGx-ZV-HIO" secondAttribute="bottom" constant="40" id="ii0-zz-2Dz"/>
-                            <constraint firstItem="eLy-m5-g3L" firstAttribute="top" secondItem="cGx-ZV-HIO" secondAttribute="bottom" constant="40" id="ioC-0V-RIO"/>
-                            <constraint firstItem="Ay2-wF-bMZ" firstAttribute="top" secondItem="eLy-m5-g3L" secondAttribute="bottom" constant="10" id="j8G-a5-g7Z"/>
-                            <constraint firstItem="QaY-HF-nFr" firstAttribute="top" secondItem="cGx-ZV-HIO" secondAttribute="bottom" constant="35" id="mzZ-ow-NLV"/>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="J7s-hc-bT2" secondAttribute="trailing" constant="70" id="qdu-oO-PY1"/>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="QaY-HF-nFr" secondAttribute="trailing" constant="60" id="xHg-d6-UZY"/>
+                            <constraint firstItem="iya-ci-wzB" firstAttribute="top" secondItem="cGx-ZV-HIO" secondAttribute="bottom" constant="20" id="ivK-fX-wiG"/>
                             <constraint firstItem="8Yx-i8-JaO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="zay-wk-YZU"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="redCircle" destination="J7s-hc-bT2" id="3tk-dN-MWP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIT-lU-YNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,15 +163,9 @@
     </scenes>
     <resources>
         <image name="Banner" width="319.5" height="225"/>
-        <image name="Sun" width="256" height="256"/>
-        <namedColor name="Background">
-            <color red="0.92941176470588238" green="0.90196078431372551" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="Sun" width="64" height="64"/>
         <namedColor name="PrimaryColor">
             <color red="0.17299999296665192" green="0.20399999618530273" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="RedCircle">
-            <color red="0.98431372549019602" green="0.37254901960784315" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

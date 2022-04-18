@@ -12,7 +12,6 @@ class HomepageViewController: UIViewController
     
 
   
-    @IBOutlet weak var redCircle: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,8 +21,6 @@ class HomepageViewController: UIViewController
     func updateUI()
     {
     
-        redCircle.layer.cornerRadius = redCircle.layer.frame.size.width / 2
-        redCircle.clipsToBounds = true
         
     }
 
