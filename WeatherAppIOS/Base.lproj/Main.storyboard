@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tkO-zZ-GSv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="FiraSans-ExtraBold.ttf">
+            <string>FiraSans-ExtraBold</string>
+        </array>
         <array key="FiraSans-Light.ttf">
             <string>FiraSans-Light</string>
         </array>
+        <array key="FiraSans-Medium.ttf">
+            <string>FiraSans-Medium</string>
+        </array>
         <array key="FiraSans-Regular.ttf">
             <string>FiraSans-Regular</string>
+        </array>
+        <array key="FiraSans-SemiBold.ttf">
+            <string>FiraSans-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -74,11 +84,100 @@
             </objects>
             <point key="canvasLocation" x="-25" y="64"/>
         </scene>
+        <!--Homepage View Controller-->
+        <scene sceneID="jwD-rD-mUe">
+            <objects>
+                <viewController id="tkO-zZ-GSv" customClass="HomepageViewController" customModule="WeatherAppIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lCN-EG-XOB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hc-Lq-uCy">
+                                <rect key="frame" x="32" y="104" width="132" height="65"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Light" family="Fira Sans" pointSize="27"/>
+                                <color key="textColor" name="PrimaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-i8-JaO">
+                                <rect key="frame" x="20" y="189" width="374" height="51"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-ZV-HIO">
+                                <rect key="frame" x="32" y="270" width="83" height="49.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="30"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 18 Apr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-7j-xWB">
+                                        <rect key="frame" x="0.0" y="30" width="83" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Light" family="Fira Sans" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turkey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBI-FC-4P1">
+                                <rect key="frame" x="321" y="280" width="61" height="24"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhf-ja-vLp">
+                                <rect key="frame" x="97" y="390" width="220" height="220"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 ° " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wF-bMZ">
+                                        <rect key="frame" x="56.5" y="68" width="107" height="84"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-ExtraBold" family="Fira Sans" pointSize="70"/>
+                                        <color key="textColor" name="PrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ay2-wF-bMZ" firstAttribute="centerX" secondItem="vhf-ja-vLp" secondAttribute="centerX" id="OzC-Tf-Jl8"/>
+                                    <constraint firstItem="Ay2-wF-bMZ" firstAttribute="centerY" secondItem="vhf-ja-vLp" secondAttribute="centerY" id="cAo-cG-5c2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eLe-T6-NYp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="bottom" secondItem="vhf-ja-vLp" secondAttribute="bottom" constant="252" id="17C-cn-9Eo"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="vhf-ja-vLp" secondAttribute="trailing" constant="97" id="2fJ-r1-C0P"/>
+                            <constraint firstItem="3Hc-Lq-uCy" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="6Gv-Ps-gI6"/>
+                            <constraint firstItem="3Hc-Lq-uCy" firstAttribute="top" secondItem="eLe-T6-NYp" secondAttribute="top" constant="60" id="7uj-ty-w0r"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="8Yx-i8-JaO" secondAttribute="trailing" constant="20" id="CGV-fl-47b"/>
+                            <constraint firstItem="vhf-ja-vLp" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" constant="150" id="CGk-Ay-m3b"/>
+                            <constraint firstItem="iBI-FC-4P1" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" constant="40" id="HM7-LJ-svq"/>
+                            <constraint firstItem="8Yx-i8-JaO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="20" id="I7a-wt-EI5"/>
+                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" constant="30" id="JrG-BO-XCJ"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="3Hc-Lq-uCy" secondAttribute="trailing" constant="250" id="NRK-g3-HUw"/>
+                            <constraint firstItem="vhf-ja-vLp" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="97" id="Ot2-HC-pl0"/>
+                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="U6u-yD-42M"/>
+                            <constraint firstItem="8Yx-i8-JaO" firstAttribute="top" secondItem="3Hc-Lq-uCy" secondAttribute="bottom" constant="20" id="Y4H-ym-H9M"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="iBI-FC-4P1" secondAttribute="trailing" constant="32" id="eH6-P2-bAG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="degreeView" destination="vhf-ja-vLp" id="Qju-eI-3Ib"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIT-lU-YNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="64"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Banner" width="319.5" height="225"/>
         <namedColor name="PrimaryColor">
-            <color red="0.17254901960784313" green="0.20392156862745098" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.17299999296665192" green="0.20399999618530273" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

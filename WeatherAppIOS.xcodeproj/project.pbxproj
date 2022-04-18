@@ -34,6 +34,7 @@
 		19630A87280CE39200C90C53 /* FiraSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19630A75280CE39200C90C53 /* FiraSans-ExtraBoldItalic.ttf */; };
 		19630A88280CE39200C90C53 /* FiraSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19630A76280CE39200C90C53 /* FiraSans-SemiBold.ttf */; };
 		19630A89280CE39200C90C53 /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19630A77280CE39200C90C53 /* FiraSans-Regular.ttf */; };
+		19630A8B280D44E500C90C53 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A8A280D44E500C90C53 /* HomepageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		19630A75280CE39200C90C53 /* FiraSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		19630A76280CE39200C90C53 /* FiraSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		19630A77280CE39200C90C53 /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
+		19630A8A280D44E500C90C53 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				19630A37280CD7A600C90C53 /* SceneDelegate.swift */,
 				19630A39280CD7A600C90C53 /* ViewController.swift */,
 				19630A3B280CD7A600C90C53 /* Main.storyboard */,
+				19630A8A280D44E500C90C53 /* HomepageViewController.swift */,
 				19630A3E280CD7A900C90C53 /* Assets.xcassets */,
 				19630A40280CD7A900C90C53 /* LaunchScreen.storyboard */,
 				19630A43280CD7A900C90C53 /* Info.plist */,
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19630A8B280D44E500C90C53 /* HomepageViewController.swift in Sources */,
 				19630A3A280CD7A600C90C53 /* ViewController.swift in Sources */,
 				19630A36280CD7A600C90C53 /* AppDelegate.swift in Sources */,
 				19630A38280CD7A600C90C53 /* SceneDelegate.swift in Sources */,
