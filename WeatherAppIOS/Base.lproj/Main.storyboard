@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tkO-zZ-GSv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="FiraSans-ExtraBold.ttf">
-            <string>FiraSans-ExtraBold</string>
+        <array key="Rubik-ExtraBold.ttf">
+            <string>Rubik-ExtraBold</string>
         </array>
-        <array key="FiraSans-Light.ttf">
-            <string>FiraSans-Light</string>
+        <array key="Rubik-Light.ttf">
+            <string>Rubik-Light</string>
         </array>
-        <array key="FiraSans-Medium.ttf">
-            <string>FiraSans-Medium</string>
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
         </array>
-        <array key="FiraSans-Regular.ttf">
-            <string>FiraSans-Regular</string>
-        </array>
-        <array key="FiraSans-SemiBold.ttf">
-            <string>FiraSans-SemiBold</string>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -35,25 +31,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Application" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SK2-wp-eof">
-                                <rect key="frame" x="100" y="459" width="214" height="77"/>
-                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="32"/>
+                                <rect key="frame" x="100" y="459" width="214" height="76"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get to know your waeher maps and adar preception forecast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cC-fW-L9g">
-                                <rect key="frame" x="32" y="566" width="350" height="46"/>
-                                <fontDescription key="fontDescription" name="FiraSans-Light" family="Fira Sans" pointSize="19"/>
+                                <rect key="frame" x="32" y="565" width="350" height="45.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-sH-35P">
-                                <rect key="frame" x="100" y="682" width="214" height="42"/>
+                                <rect key="frame" x="100" y="680.5" width="214" height="41.5"/>
                                 <color key="backgroundColor" name="PrimaryColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Started">
-                                    <fontDescription key="titleFontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="23"/>
+                                    <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="23"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tkO-zZ-GSv" kind="presentation" modalPresentationStyle="fullScreen" id="UUA-6b-Z6a"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="IBf-lb-xCG">
                                 <rect key="frame" x="32" y="194" width="350" height="225"/>
@@ -92,92 +91,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hc-Lq-uCy">
-                                <rect key="frame" x="32" y="104" width="132" height="65"/>
-                                <fontDescription key="fontDescription" name="FiraSans-Light" family="Fira Sans" pointSize="27"/>
-                                <color key="textColor" name="PrimaryColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-i8-JaO">
-                                <rect key="frame" x="20" y="189" width="374" height="51"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-ZV-HIO">
-                                <rect key="frame" x="32" y="270" width="83" height="49.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-ZV-HIO">
+                                <rect key="frame" x="100" y="177" width="214" height="50.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
-                                        <rect key="frame" x="0.0" y="0.0" width="83" height="30"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="25"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONDON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="24"/>
+                                        <color key="textColor" name="PrimaryColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 18 Apr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-7j-xWB">
-                                        <rect key="frame" x="0.0" y="30" width="83" height="19.5"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Light" family="Fira Sans" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turkey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBI-FC-4P1">
-                                <rect key="frame" x="321" y="280" width="61" height="24"/>
-                                <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhf-ja-vLp">
-                                <rect key="frame" x="97" y="390" width="220" height="220"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 ° " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wF-bMZ">
-                                        <rect key="frame" x="56.5" y="68" width="107" height="84"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-ExtraBold" family="Fira Sans" pointSize="70"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday  2:45 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-7j-xWB">
+                                        <rect key="frame" x="0.0" y="31.5" width="214" height="19"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="16"/>
                                         <color key="textColor" name="PrimaryColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 °" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wF-bMZ">
+                                <rect key="frame" x="32" y="325" width="60.5" height="59.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="50"/>
+                                <color key="textColor" name="PrimaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-i8-JaO">
+                                <rect key="frame" x="32" y="94" width="350" height="51"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7s-hc-bT2">
+                                <rect key="frame" x="264" y="267.5" width="80" height="80"/>
+                                <color key="backgroundColor" name="RedCircle"/>
                                 <constraints>
-                                    <constraint firstItem="Ay2-wF-bMZ" firstAttribute="centerX" secondItem="vhf-ja-vLp" secondAttribute="centerX" id="OzC-Tf-Jl8"/>
-                                    <constraint firstItem="Ay2-wF-bMZ" firstAttribute="centerY" secondItem="vhf-ja-vLp" secondAttribute="centerY" id="cAo-cG-5c2"/>
+                                    <constraint firstAttribute="width" constant="80" id="By0-q9-kTT"/>
+                                    <constraint firstAttribute="height" constant="80" id="g3s-J5-oQt"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-HF-nFr">
+                                <rect key="frame" x="234" y="262.5" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ezH-pC-aI1"/>
+                                    <constraint firstAttribute="height" constant="120" id="rzi-84-Fdf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLy-m5-g3L">
+                                <rect key="frame" x="32" y="267.5" width="130" height="47.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-ExtraBold" family="Rubik" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eLe-T6-NYp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="bottom" secondItem="vhf-ja-vLp" secondAttribute="bottom" constant="252" id="17C-cn-9Eo"/>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="vhf-ja-vLp" secondAttribute="trailing" constant="97" id="2fJ-r1-C0P"/>
-                            <constraint firstItem="3Hc-Lq-uCy" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="6Gv-Ps-gI6"/>
-                            <constraint firstItem="3Hc-Lq-uCy" firstAttribute="top" secondItem="eLe-T6-NYp" secondAttribute="top" constant="60" id="7uj-ty-w0r"/>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="8Yx-i8-JaO" secondAttribute="trailing" constant="20" id="CGV-fl-47b"/>
-                            <constraint firstItem="vhf-ja-vLp" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" constant="150" id="CGk-Ay-m3b"/>
-                            <constraint firstItem="iBI-FC-4P1" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" constant="40" id="HM7-LJ-svq"/>
-                            <constraint firstItem="8Yx-i8-JaO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="20" id="I7a-wt-EI5"/>
-                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" constant="30" id="JrG-BO-XCJ"/>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="3Hc-Lq-uCy" secondAttribute="trailing" constant="250" id="NRK-g3-HUw"/>
-                            <constraint firstItem="vhf-ja-vLp" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="97" id="Ot2-HC-pl0"/>
-                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="U6u-yD-42M"/>
-                            <constraint firstItem="8Yx-i8-JaO" firstAttribute="top" secondItem="3Hc-Lq-uCy" secondAttribute="bottom" constant="20" id="Y4H-ym-H9M"/>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="iBI-FC-4P1" secondAttribute="trailing" constant="32" id="eH6-P2-bAG"/>
+                            <constraint firstItem="eLy-m5-g3L" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="3DS-gZ-J3q"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="8Yx-i8-JaO" secondAttribute="trailing" constant="32" id="8aS-ZS-MYa"/>
+                            <constraint firstItem="8Yx-i8-JaO" firstAttribute="top" secondItem="eLe-T6-NYp" secondAttribute="top" constant="50" id="QIr-BG-T2h"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="cGx-ZV-HIO" secondAttribute="trailing" constant="100" id="ac1-DG-Ukm"/>
+                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" constant="32" id="fAT-Pc-QuA"/>
+                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="100" id="i8F-CY-hxJ"/>
+                            <constraint firstItem="Ay2-wF-bMZ" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="iFI-gL-7Gu"/>
+                            <constraint firstItem="J7s-hc-bT2" firstAttribute="top" secondItem="cGx-ZV-HIO" secondAttribute="bottom" constant="40" id="ii0-zz-2Dz"/>
+                            <constraint firstItem="eLy-m5-g3L" firstAttribute="top" secondItem="cGx-ZV-HIO" secondAttribute="bottom" constant="40" id="ioC-0V-RIO"/>
+                            <constraint firstItem="Ay2-wF-bMZ" firstAttribute="top" secondItem="eLy-m5-g3L" secondAttribute="bottom" constant="10" id="j8G-a5-g7Z"/>
+                            <constraint firstItem="QaY-HF-nFr" firstAttribute="top" secondItem="cGx-ZV-HIO" secondAttribute="bottom" constant="35" id="mzZ-ow-NLV"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="J7s-hc-bT2" secondAttribute="trailing" constant="70" id="qdu-oO-PY1"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="QaY-HF-nFr" secondAttribute="trailing" constant="60" id="xHg-d6-UZY"/>
+                            <constraint firstItem="8Yx-i8-JaO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="zay-wk-YZU"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="degreeView" destination="vhf-ja-vLp" id="Qju-eI-3Ib"/>
+                        <outlet property="redCircle" destination="J7s-hc-bT2" id="3tk-dN-MWP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIT-lU-YNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="64"/>
+            <point key="canvasLocation" x="685.50724637681162" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>
         <image name="Banner" width="319.5" height="225"/>
+        <image name="Sun" width="256" height="256"/>
+        <namedColor name="Background">
+            <color red="0.92941176470588238" green="0.90196078431372551" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="PrimaryColor">
             <color red="0.17299999296665192" green="0.20399999618530273" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="RedCircle">
+            <color red="0.98431372549019602" green="0.37254901960784315" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

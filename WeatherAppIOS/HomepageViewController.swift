@@ -11,7 +11,8 @@ class HomepageViewController: UIViewController
 {
     
 
-    @IBOutlet weak var degreeView: UIView!
+  
+    @IBOutlet weak var redCircle: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,17 +21,9 @@ class HomepageViewController: UIViewController
     
     func updateUI()
     {
-        
-        
-        degreeView.layer.cornerRadius = degreeView.layer.frame.size.width / 2
-        degreeView.clipsToBounds = true
-        degreeView.layer.shadowOffset = CGSize(width: 0, height: 1)
-        degreeView.layer.shadowColor = UIColor.purple.cgColor
-        degreeView.layer.shadowOpacity = 0.4
-        degreeView.layer.shadowRadius = 20
-        degreeView.layer.masksToBounds = false
-       
-        
+    
+        redCircle.layer.cornerRadius = redCircle.layer.frame.size.width / 2
+        redCircle.clipsToBounds = true
         
     }
 
