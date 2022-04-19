@@ -21,6 +21,10 @@
 		190407C5280DEADA008FFE50 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 190407B7280DEAD9008FFE50 /* Rubik-Italic.ttf */; };
 		190407C6280DEADA008FFE50 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 190407B8280DEADA008FFE50 /* Rubik-MediumItalic.ttf */; };
 		190407C7280DEADA008FFE50 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 190407B9280DEADA008FFE50 /* Rubik-Bold.ttf */; };
+		190407D2280EE85D008FFE50 /* HomepageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190407D1280EE85D008FFE50 /* HomepageProtocol.swift */; };
+		190407D4280EE8DE008FFE50 /* HomepageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190407D3280EE8DE008FFE50 /* HomepageInteractor.swift */; };
+		190407D6280EE910008FFE50 /* HomepagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190407D5280EE910008FFE50 /* HomepagePresenter.swift */; };
+		190407D8280EE92B008FFE50 /* HomepageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190407D7280EE92B008FFE50 /* HomepageRouter.swift */; };
 		19630A36280CD7A600C90C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A35280CD7A600C90C53 /* AppDelegate.swift */; };
 		19630A38280CD7A600C90C53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A37280CD7A600C90C53 /* SceneDelegate.swift */; };
 		19630A3A280CD7A600C90C53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A39280CD7A600C90C53 /* ViewController.swift */; };
@@ -65,6 +69,10 @@
 		190407B7280DEAD9008FFE50 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		190407B8280DEADA008FFE50 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		190407B9280DEADA008FFE50 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		190407D1280EE85D008FFE50 /* HomepageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageProtocol.swift; sourceTree = "<group>"; };
+		190407D3280EE8DE008FFE50 /* HomepageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageInteractor.swift; sourceTree = "<group>"; };
+		190407D5280EE910008FFE50 /* HomepagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepagePresenter.swift; sourceTree = "<group>"; };
+		190407D7280EE92B008FFE50 /* HomepageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageRouter.swift; sourceTree = "<group>"; };
 		19630A32280CD7A600C90C53 /* WeatherAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19630A35280CD7A600C90C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19630A37280CD7A600C90C53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +114,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190407C8280EE636008FFE50 /* homepage-module */ = {
+			isa = PBXGroup;
+			children = (
+				190407CE280EE757008FFE50 /* router */,
+				190407CD280EE677008FFE50 /* view */,
+				190407CC280EE664008FFE50 /* presenter */,
+				190407CA280EE64F008FFE50 /* interactor */,
+				190407C9280EE646008FFE50 /* protocols */,
+			);
+			path = "homepage-module";
+			sourceTree = "<group>";
+		};
+		190407C9280EE646008FFE50 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				190407D1280EE85D008FFE50 /* HomepageProtocol.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		190407CA280EE64F008FFE50 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				190407D3280EE8DE008FFE50 /* HomepageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		190407CC280EE664008FFE50 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				190407D5280EE910008FFE50 /* HomepagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		190407CD280EE677008FFE50 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				19630A8A280D44E500C90C53 /* HomepageViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		190407CE280EE757008FFE50 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				190407D7280EE92B008FFE50 /* HomepageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		19630A29280CD7A600C90C53 = {
 			isa = PBXGroup;
 			children = (
@@ -129,12 +189,12 @@
 		19630A34280CD7A600C90C53 /* WeatherAppIOS */ = {
 			isa = PBXGroup;
 			children = (
+				190407C8280EE636008FFE50 /* homepage-module */,
 				19630A65280CE36F00C90C53 /* Fonts */,
 				19630A35280CD7A600C90C53 /* AppDelegate.swift */,
 				19630A37280CD7A600C90C53 /* SceneDelegate.swift */,
 				19630A39280CD7A600C90C53 /* ViewController.swift */,
 				19630A3B280CD7A600C90C53 /* Main.storyboard */,
-				19630A8A280D44E500C90C53 /* HomepageViewController.swift */,
 				19630A3E280CD7A900C90C53 /* Assets.xcassets */,
 				19630A40280CD7A900C90C53 /* LaunchScreen.storyboard */,
 				19630A43280CD7A900C90C53 /* Info.plist */,
@@ -327,8 +387,12 @@
 			files = (
 				19630A8B280D44E500C90C53 /* HomepageViewController.swift in Sources */,
 				19630A3A280CD7A600C90C53 /* ViewController.swift in Sources */,
+				190407D4280EE8DE008FFE50 /* HomepageInteractor.swift in Sources */,
+				190407D6280EE910008FFE50 /* HomepagePresenter.swift in Sources */,
 				19630A36280CD7A600C90C53 /* AppDelegate.swift in Sources */,
 				19630A38280CD7A600C90C53 /* SceneDelegate.swift in Sources */,
+				190407D8280EE92B008FFE50 /* HomepageRouter.swift in Sources */,
+				190407D2280EE85D008FFE50 /* HomepageProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
