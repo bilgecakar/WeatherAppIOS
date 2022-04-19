@@ -6,3 +6,25 @@
 //
 
 import Foundation
+
+class HomepagePresenter : ViewToPresenterHomepageProtocol
+{
+    var homeInteractor: PresenterToInteractorHomepageProtocol?
+    
+    var homeView: PresenterToViewHomepageProtocol?
+    
+    func getCurrentWeather() {
+        homeInteractor?.getCurrentWeather()
+    }
+    
+    
+}
+
+extension HomepagePresenter : InteractorToPresenterHomepageProtocol
+{
+    func sendToDataPresenter() {
+        homeView?.sendToDataView()
+    }
+    
+}
+

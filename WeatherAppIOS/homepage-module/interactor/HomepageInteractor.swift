@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class HomepageInteractor : PresenterToInteractorHomepageProtocol
+{
+    var homePresenter: InteractorToPresenterHomepageProtocol?
+    
+    func getCurrentWeather() {
+        
+         //let url = URL(string: "")
+    }
+    
+    
+}
+

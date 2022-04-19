@@ -91,13 +91,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-i8-JaO">
-                                <rect key="frame" x="32" y="74" width="350" height="51"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-ZV-HIO">
-                                <rect key="frame" x="100" y="150" width="214" height="50.5"/>
+                                <rect key="frame" x="100" y="148" width="214" height="50.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONDON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="28.5"/>
@@ -114,7 +109,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="iya-ci-wzB">
-                                <rect key="frame" x="32" y="230.5" width="350" height="117"/>
+                                <rect key="frame" x="32" y="228.5" width="350" height="117"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i1L-AR-CNN">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="117"/>
@@ -139,30 +134,53 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="WTu-Ab-qro">
+                                <rect key="frame" x="32" y="84" width="350" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpy-Hd-5fj">
+                                        <rect key="frame" x="0.0" y="0.0" width="278" height="34"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbd-Wr-gn0">
+                                        <rect key="frame" x="258" y="0.0" width="92" height="34"/>
+                                        <color key="tintColor" name="PrimaryColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                        <connections>
+                                            <action selector="searcPressed:" destination="tkO-zZ-GSv" eventType="touchUpInside" id="Al8-21-olH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eLe-T6-NYp"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="8Yx-i8-JaO" secondAttribute="trailing" constant="32" id="0Zo-Jo-moA"/>
-                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="top" secondItem="8Yx-i8-JaO" secondAttribute="bottom" constant="25" id="7oW-qm-FLc"/>
                             <constraint firstItem="iya-ci-wzB" firstAttribute="top" secondItem="cGx-ZV-HIO" secondAttribute="bottom" constant="30" id="AOW-0Q-6QW"/>
-                            <constraint firstItem="8Yx-i8-JaO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="P87-Cs-KJf"/>
                             <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="iya-ci-wzB" secondAttribute="trailing" constant="32" id="Qrp-sE-0Ic"/>
                             <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="cGx-ZV-HIO" secondAttribute="trailing" constant="100" id="Sil-L0-2ru"/>
-                            <constraint firstItem="8Yx-i8-JaO" firstAttribute="top" secondItem="lCN-EG-XOB" secondAttribute="topMargin" constant="30" id="gly-9K-h8v"/>
+                            <constraint firstItem="WTu-Ab-qro" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="bGf-Vo-vCM"/>
+                            <constraint firstItem="WTu-Ab-qro" firstAttribute="top" secondItem="eLe-T6-NYp" secondAttribute="top" constant="40" id="buT-6d-bOR"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="WTu-Ab-qro" secondAttribute="trailing" constant="32" id="cC6-wD-6vX"/>
+                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="top" secondItem="WTu-Ab-qro" secondAttribute="bottom" constant="30" id="eOE-w9-ClK"/>
                             <constraint firstItem="cGx-ZV-HIO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="100" id="pIc-mC-rFX"/>
                             <constraint firstItem="iya-ci-wzB" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="vpM-if-rfU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="search" destination="Bpy-Hd-5fj" id="IL6-Wo-cWA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIT-lU-YNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="64"/>
+            <point key="canvasLocation" x="747.82608695652175" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>
         <image name="Banner" width="319.5" height="225"/>
         <image name="Sun" width="64" height="64"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="PrimaryColor">
             <color red="0.17299999296665192" green="0.20399999618530273" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
