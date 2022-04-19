@@ -14,10 +14,14 @@ class HomepageViewController: UIViewController
     @IBOutlet weak var search: UITextField!
     var weather : Weather?
     
+    var homePresenterObject : ViewToPresenterHomepageProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
         search.delegate = self
+        HomepageRouter.createModule(ref: self)
+        homePresenterObject?.getCurrentWeather()
    
     }
     
@@ -29,6 +33,15 @@ class HomepageViewController: UIViewController
     }
     
 }
+extension HomepageViewController : PresenterToViewHomepageProtocol
+{
+    func sendToDataView() {
+       print("Deneme")
+    }
+    
+    
+}
+
 
 extension HomepageViewController : UITextFieldDelegate
 {

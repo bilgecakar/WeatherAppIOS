@@ -13,7 +13,28 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
     
     func getCurrentWeather() {
         
-         //let url = URL(string: "")
+         let url = URL(string: "https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=1b45ce95c85f49f489fd96cc081c71c7&include=minutely")!
+        URLSession.shared.dataTask(with: url){ data, response, error in
+            
+            if error != nil || data == nil
+            {
+                print("Hata")
+                return
+            }
+            
+            do
+            {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                print(json)
+                
+            }
+            catch
+            {
+                print("JSON ERROR : \(error.localizedDescription)")
+            }
+            
+        }.resume()
+        
     }
     
     
