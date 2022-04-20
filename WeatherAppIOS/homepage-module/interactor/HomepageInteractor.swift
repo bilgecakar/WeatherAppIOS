@@ -13,7 +13,7 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
     
     func getCurrentWeather() {
         
-         let url = URL(string: "https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=1b45ce95c85f49f489fd96cc081c71c7&include=minutely")!
+        let url = URL(string: "https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=1b45ce95c85f49f489fd96cc081c71c7&include=minutely")!
         URLSession.shared.dataTask(with: url){ data, response, error in
             
             if error != nil || data == nil
@@ -24,8 +24,8 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
             
             do
             {
-                let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                print(json)
+                let answer = try JSONDecoder().decode(WeatherResponse.self, from : data!)
+                print(answer.data![0].city_name!)
                 
             }
             catch

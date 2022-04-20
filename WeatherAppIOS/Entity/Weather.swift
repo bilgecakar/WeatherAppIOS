@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Weather
+class Weather : Codable
 {
     var temp : Double?
     var city_name : String?
@@ -22,4 +22,5 @@ class Weather
         self.wind_cdir = wind_cdir
         self.wind_cdir_full = wind_cdir_full
     }
+    
 }
