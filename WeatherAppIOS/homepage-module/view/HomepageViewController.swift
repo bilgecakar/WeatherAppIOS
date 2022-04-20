@@ -9,24 +9,30 @@ import UIKit
 
 class HomepageViewController: UIViewController
 {
-
-      
+    
+    
+    @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var search: UITextField!
-    var weather : Weather?
+    var weatherList = [Weather]()
+    
     
     var homePresenterObject : ViewToPresenterHomepageProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         search.delegate = self
         HomepageRouter.createModule(ref: self)
+        
+    }
+ 
+    
+    override func viewWillAppear(_ animated: Bool) {
         homePresenterObject?.getCurrentWeather()
-   
+       
     }
     
     
-
     @IBAction func searcPressed(_ sender: Any){
         search.endEditing(true)
         print(search.text!)
@@ -35,8 +41,12 @@ class HomepageViewController: UIViewController
 }
 extension HomepageViewController : PresenterToViewHomepageProtocol
 {
-    func sendToDataView() {
-       print("Deneme")
+    func sendToDataView(weatherInfo : Array<Weather>) {
+        self.weatherList = weatherInfo
+     
+        DispatchQueue.main.async {
+            self.cityNameLabel.text = self.weatherList[0].city_name!
+        }
     }
     
     

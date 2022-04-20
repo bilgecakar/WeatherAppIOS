@@ -22,11 +22,11 @@ protocol PresenterToInteractorHomepageProtocol
 }
 protocol InteractorToPresenterHomepageProtocol
 {
-    func sendToDataPresenter()
+    func sendToDataPresenter(weatherInfo : Array<Weather>)
 }
 protocol PresenterToViewHomepageProtocol
 {
-    func sendToDataView()
+    func sendToDataView(weatherInfo : Array<Weather>)
 }
 protocol PresenterToRouterHomepageProtocol
 {

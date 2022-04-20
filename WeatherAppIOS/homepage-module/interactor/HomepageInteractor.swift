@@ -25,8 +25,15 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
             do
             {
                 let answer = try JSONDecoder().decode(WeatherResponse.self, from : data!)
-                print(answer.data![0].city_name!)
+                var list = [Weather]()
+                if let answerList = answer.data
+                {
+                    list = answerList
+                }
                 
+             
+                
+                self.homePresenter?.sendToDataPresenter(weatherInfo: list)
             }
             catch
             {

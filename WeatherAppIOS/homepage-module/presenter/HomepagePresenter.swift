@@ -22,8 +22,8 @@ class HomepagePresenter : ViewToPresenterHomepageProtocol
 
 extension HomepagePresenter : InteractorToPresenterHomepageProtocol
 {
-    func sendToDataPresenter() {
-        homeView?.sendToDataView()
+    func sendToDataPresenter(weatherInfo : Array<Weather>) {
+        homeView?.sendToDataView(weatherInfo: weatherInfo)
     }
     
 }
