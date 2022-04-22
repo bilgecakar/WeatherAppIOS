@@ -11,6 +11,9 @@ class HomepageViewController: UIViewController
 {
     
     
+    @IBOutlet weak var dateLabel: UIImageView!
+    @IBOutlet weak var weatherTempLabel: UILabel!
+    @IBOutlet weak var weatherDesc: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var search: UITextField!
     var weatherList = [Weather]()
@@ -23,7 +26,13 @@ class HomepageViewController: UIViewController
         
         search.delegate = self
         HomepageRouter.createModule(ref: self)
+        updateUI()
         
+    }
+    
+    func updateUI()
+    {
+        weatherDesc.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
     }
  
     
@@ -46,6 +55,8 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
      
         DispatchQueue.main.async {
             self.cityNameLabel.text = self.weatherList[0].city_name!
+            self.weatherTempLabel.text = "\(self.weatherList[0].temp!)°"
+            
         }
     }
     

@@ -8,9 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Rubik-ExtraBold.ttf">
-            <string>Rubik-ExtraBold</string>
-        </array>
         <array key="Rubik-Light.ttf">
             <string>Rubik-Light</string>
         </array>
@@ -91,86 +88,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-ZV-HIO">
-                                <rect key="frame" x="100" y="148" width="214" height="50.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONDON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="28.5"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="24"/>
-                                        <color key="textColor" name="PrimaryColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday  2:45 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-7j-xWB">
-                                        <rect key="frame" x="0.0" y="31.5" width="214" height="19"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="16"/>
-                                        <color key="textColor" name="PrimaryColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="iya-ci-wzB">
-                                <rect key="frame" x="32" y="228.5" width="350" height="117"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i1L-AR-CNN">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="117"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLy-m5-g3L">
-                                                <rect key="frame" x="0.0" y="0.0" width="130" height="47.5"/>
-                                                <fontDescription key="fontDescription" name="Rubik-ExtraBold" family="Rubik" pointSize="40"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 °" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wF-bMZ">
-                                                <rect key="frame" x="0.0" y="57.5" width="60.5" height="59.5"/>
-                                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="50"/>
-                                                <color key="textColor" name="PrimaryColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-HF-nFr">
-                                        <rect key="frame" x="200" y="0.0" width="150" height="117"/>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="WTu-Ab-qro">
-                                <rect key="frame" x="32" y="84" width="350" height="34"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Daytime" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-Tx-7Vu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="WTu-Ab-qro">
+                                <rect key="frame" x="32" y="74" width="350" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpy-Hd-5fj">
-                                        <rect key="frame" x="0.0" y="0.0" width="278" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="289.5" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbd-Wr-gn0">
-                                        <rect key="frame" x="258" y="0.0" width="92" height="34"/>
-                                        <color key="tintColor" name="PrimaryColor"/>
+                                        <rect key="frame" x="264.5" y="0.0" width="85.5" height="34"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title=""/>
                                         <connections>
                                             <action selector="searcPressed:" destination="tkO-zZ-GSv" eventType="touchUpInside" id="Al8-21-olH"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLy-m5-g3L">
+                                <rect key="frame" x="297.5" y="228" width="84.5" height="23"/>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="19"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LKR-cZ-2EE">
+                                <rect key="frame" x="32" y="138" width="108" height="47"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S5Y-QE-joI">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="26.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="hIa-9M-MbY">
+                                                <rect key="frame" x="0.0" y="0.0" width="20.5" height="26.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
+                                                <rect key="frame" x="30.5" y="0.0" width="77.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="22"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr, Monday  2:45 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-7j-xWB" userLabel="Monday  2:45">
+                                        <rect key="frame" x="0.0" y="31.5" width="108" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="13"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wF-bMZ">
+                                <rect key="frame" x="32" y="210" width="106" height="83"/>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="70"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eLe-T6-NYp"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iya-ci-wzB" firstAttribute="top" secondItem="cGx-ZV-HIO" secondAttribute="bottom" constant="30" id="AOW-0Q-6QW"/>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="iya-ci-wzB" secondAttribute="trailing" constant="32" id="Qrp-sE-0Ic"/>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="cGx-ZV-HIO" secondAttribute="trailing" constant="100" id="Sil-L0-2ru"/>
-                            <constraint firstItem="WTu-Ab-qro" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="bGf-Vo-vCM"/>
-                            <constraint firstItem="WTu-Ab-qro" firstAttribute="top" secondItem="eLe-T6-NYp" secondAttribute="top" constant="40" id="buT-6d-bOR"/>
-                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="WTu-Ab-qro" secondAttribute="trailing" constant="32" id="cC6-wD-6vX"/>
-                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="top" secondItem="WTu-Ab-qro" secondAttribute="bottom" constant="30" id="eOE-w9-ClK"/>
-                            <constraint firstItem="cGx-ZV-HIO" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="100" id="pIc-mC-rFX"/>
-                            <constraint firstItem="iya-ci-wzB" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="vpM-if-rfU"/>
+                            <constraint firstItem="WTu-Ab-qro" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="4BQ-S1-AIU"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="eLy-m5-g3L" secondAttribute="trailing" constant="32" id="AqG-p7-rah"/>
+                            <constraint firstItem="FIt-Tx-7Vu" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" id="SRD-rO-4iF"/>
+                            <constraint firstItem="FIt-Tx-7Vu" firstAttribute="trailing" secondItem="eLe-T6-NYp" secondAttribute="trailing" id="TBv-Jm-8QF"/>
+                            <constraint firstItem="WTu-Ab-qro" firstAttribute="top" secondItem="eLe-T6-NYp" secondAttribute="top" constant="30" id="TOz-MJ-wmg"/>
+                            <constraint firstAttribute="bottom" secondItem="FIt-Tx-7Vu" secondAttribute="bottom" id="Ufu-yZ-BiA"/>
+                            <constraint firstItem="LKR-cZ-2EE" firstAttribute="top" secondItem="WTu-Ab-qro" secondAttribute="bottom" constant="30" id="YAb-cs-qUc"/>
+                            <constraint firstItem="FIt-Tx-7Vu" firstAttribute="top" secondItem="lCN-EG-XOB" secondAttribute="top" id="ZR7-BG-cPG"/>
+                            <constraint firstItem="LKR-cZ-2EE" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="bVF-hC-EyM"/>
+                            <constraint firstItem="Ay2-wF-bMZ" firstAttribute="top" secondItem="LKR-cZ-2EE" secondAttribute="bottom" constant="25" id="fEn-aN-aMY"/>
+                            <constraint firstItem="Ay2-wF-bMZ" firstAttribute="leading" secondItem="eLe-T6-NYp" secondAttribute="leading" constant="32" id="kC8-0P-UST"/>
+                            <constraint firstItem="eLe-T6-NYp" firstAttribute="trailing" secondItem="WTu-Ab-qro" secondAttribute="trailing" constant="32" id="mW9-gl-idi"/>
+                            <constraint firstItem="eLy-m5-g3L" firstAttribute="top" secondItem="WTu-Ab-qro" secondAttribute="bottom" constant="120" id="vk8-Ht-QWp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityNameLabel" destination="JvT-zD-3l6" id="ujJ-qx-4l2"/>
+                        <outlet property="dateLabel" destination="FIt-Tx-7Vu" id="zv7-an-5Uc"/>
                         <outlet property="search" destination="Bpy-Hd-5fj" id="IL6-Wo-cWA"/>
+                        <outlet property="weatherDesc" destination="eLy-m5-g3L" id="o1o-Yo-LbM"/>
+                        <outlet property="weatherTempLabel" destination="Ay2-wF-bMZ" id="yFR-2K-0Fg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIT-lU-YNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -180,7 +184,8 @@
     </scenes>
     <resources>
         <image name="Banner" width="319.5" height="225"/>
-        <image name="Sun" width="64" height="64"/>
+        <image name="Daytime" width="188" height="376"/>
+        <image name="Pin" width="16" height="16"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="PrimaryColor">
             <color red="0.17299999296665192" green="0.20399999618530273" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
