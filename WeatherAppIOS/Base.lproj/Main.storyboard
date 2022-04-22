@@ -104,11 +104,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NightDay" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-Tx-7Vu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="WTu-Ab-qro">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WTu-Ab-qro">
                                 <rect key="frame" x="32" y="74" width="350" height="34"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpy-Hd-5fj">
-                                        <rect key="frame" x="0.0" y="0.0" width="289.5" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpy-Hd-5fj">
+                                        <rect key="frame" x="0.0" y="0.0" width="294.5" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,7 +116,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbd-Wr-gn0">
-                                        <rect key="frame" x="264.5" y="0.0" width="85.5" height="34"/>
+                                        <rect key="frame" x="304.5" y="0.0" width="45.5" height="34"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title=""/>
@@ -134,6 +134,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="hIa-9M-MbY">
                                                 <rect key="frame" x="0.0" y="0.0" width="30.5" height="35"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
                                                 <rect key="frame" x="40.5" y="0.0" width="84.5" height="35"/>

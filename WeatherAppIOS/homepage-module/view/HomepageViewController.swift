@@ -59,6 +59,14 @@ class HomepageViewController: UIViewController
         shadowThreeView.layer.masksToBounds = false
         shadowThreeView.layer.cornerRadius = 35
         shadowThreeView.clipsToBounds = true
+        
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0.0, y: search.frame.height - 1, width: search.frame.width, height: 1.0)
+        bottomLine.backgroundColor = UIColor.white.cgColor
+        search.borderStyle = UITextField.BorderStyle.none
+        search.layer.addSublayer(bottomLine)
+        
+        
 
     }
     
