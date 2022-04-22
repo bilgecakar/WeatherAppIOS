@@ -13,6 +13,11 @@ class HomepageViewController: UIViewController
     
     @IBOutlet weak var backgroundImage: UIImageView!
     
+   
+    @IBOutlet weak var shadowThreeView: UIView!
+    @IBOutlet weak var shadowTwoView: UIView!
+    @IBOutlet weak var shadowOneView: UIView!
+    @IBOutlet weak var hourlyWeather: UIView!
     @IBOutlet weak var cloudLabel: UILabel!
     @IBOutlet weak var windyLabel: UILabel!
     @IBOutlet weak var sunsetLabel: UILabel!
@@ -37,10 +42,24 @@ class HomepageViewController: UIViewController
     
     func updateUI()
     {
-        backgroundImage.layer.masksToBounds = true
-        backgroundImage.layer.cornerRadius = 60
-        backgroundImage.layer.maskedCorners = [.layerMinXMaxYCorner]
-        backgroundImage.clipsToBounds = true
+        hourlyWeather.layer.masksToBounds = false
+        hourlyWeather.layer.cornerRadius = 50
+        hourlyWeather.clipsToBounds = true
+        
+        shadowOneView.layer.masksToBounds = false
+        shadowOneView.layer.cornerRadius = 45
+        shadowOneView.clipsToBounds = true
+
+        
+        shadowTwoView.layer.masksToBounds = false
+        shadowTwoView.layer.cornerRadius = 40
+        shadowTwoView.clipsToBounds = true
+
+        
+        shadowThreeView.layer.masksToBounds = false
+        shadowThreeView.layer.cornerRadius = 35
+        shadowThreeView.clipsToBounds = true
+
     }
     
  
