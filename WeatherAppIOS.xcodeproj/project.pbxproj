@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19004CD728132A5D00B76651 /* AdventPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19004CD028132A5B00B76651 /* AdventPro-ExtraLight.ttf */; };
+		19004CD828132A5D00B76651 /* AdventPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19004CD128132A5C00B76651 /* AdventPro-Bold.ttf */; };
+		19004CD928132A5D00B76651 /* AdventPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19004CD228132A5C00B76651 /* AdventPro-Thin.ttf */; };
+		19004CDA28132A5D00B76651 /* AdventPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19004CD328132A5C00B76651 /* AdventPro-Regular.ttf */; };
+		19004CDB28132A5D00B76651 /* AdventPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19004CD428132A5C00B76651 /* AdventPro-Medium.ttf */; };
+		19004CDC28132A5D00B76651 /* AdventPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19004CD528132A5C00B76651 /* AdventPro-SemiBold.ttf */; };
+		19004CDD28132A5D00B76651 /* AdventPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19004CD628132A5C00B76651 /* AdventPro-Light.ttf */; };
 		190407BA280DEADA008FFE50 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 190407AC280DEAD8008FFE50 /* Rubik-Regular.ttf */; };
 		190407BB280DEADA008FFE50 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 190407AD280DEAD8008FFE50 /* Rubik-Light.ttf */; };
 		190407BC280DEADA008FFE50 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 190407AE280DEAD9008FFE50 /* Rubik-ExtraBold.ttf */; };
@@ -58,6 +65,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19004CD028132A5B00B76651 /* AdventPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		19004CD128132A5C00B76651 /* AdventPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Bold.ttf"; sourceTree = "<group>"; };
+		19004CD228132A5C00B76651 /* AdventPro-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Thin.ttf"; sourceTree = "<group>"; };
+		19004CD328132A5C00B76651 /* AdventPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Regular.ttf"; sourceTree = "<group>"; };
+		19004CD428132A5C00B76651 /* AdventPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Medium.ttf"; sourceTree = "<group>"; };
+		19004CD528132A5C00B76651 /* AdventPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		19004CD628132A5C00B76651 /* AdventPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Light.ttf"; sourceTree = "<group>"; };
 		190407AC280DEAD8008FFE50 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		190407AD280DEAD8008FFE50 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
 		190407AE280DEAD9008FFE50 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -239,6 +253,13 @@
 		19630A65280CE36F00C90C53 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				19004CD128132A5C00B76651 /* AdventPro-Bold.ttf */,
+				19004CD028132A5B00B76651 /* AdventPro-ExtraLight.ttf */,
+				19004CD628132A5C00B76651 /* AdventPro-Light.ttf */,
+				19004CD428132A5C00B76651 /* AdventPro-Medium.ttf */,
+				19004CD328132A5C00B76651 /* AdventPro-Regular.ttf */,
+				19004CD528132A5C00B76651 /* AdventPro-SemiBold.ttf */,
+				19004CD228132A5C00B76651 /* AdventPro-Thin.ttf */,
 				190407B2280DEAD9008FFE50 /* Rubik-Black.ttf */,
 				190407B1280DEAD9008FFE50 /* Rubik-BlackItalic.ttf */,
 				190407B9280DEADA008FFE50 /* Rubik-Bold.ttf */,
@@ -362,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19630A42280CD7A900C90C53 /* LaunchScreen.storyboard in Resources */,
+				19004CD928132A5D00B76651 /* AdventPro-Thin.ttf in Resources */,
 				190407BE280DEADA008FFE50 /* Rubik-LightItalic.ttf in Resources */,
 				190407BF280DEADA008FFE50 /* Rubik-BlackItalic.ttf in Resources */,
 				190407C6280DEADA008FFE50 /* Rubik-MediumItalic.ttf in Resources */,
@@ -371,13 +393,19 @@
 				19630A3F280CD7A900C90C53 /* Assets.xcassets in Resources */,
 				190407BC280DEADA008FFE50 /* Rubik-ExtraBold.ttf in Resources */,
 				19630A3D280CD7A600C90C53 /* Main.storyboard in Resources */,
+				19004CDA28132A5D00B76651 /* AdventPro-Regular.ttf in Resources */,
+				19004CD728132A5D00B76651 /* AdventPro-ExtraLight.ttf in Resources */,
 				190407C1280DEADA008FFE50 /* Rubik-SemiBold.ttf in Resources */,
 				190407C0280DEADA008FFE50 /* Rubik-Black.ttf in Resources */,
 				190407C5280DEADA008FFE50 /* Rubik-Italic.ttf in Resources */,
+				19004CD828132A5D00B76651 /* AdventPro-Bold.ttf in Resources */,
+				19004CDB28132A5D00B76651 /* AdventPro-Medium.ttf in Resources */,
 				190407C3280DEADA008FFE50 /* Rubik-BoldItalic.ttf in Resources */,
 				190407C7280DEADA008FFE50 /* Rubik-Bold.ttf in Resources */,
 				190407C4280DEADA008FFE50 /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				190407BD280DEADA008FFE50 /* Rubik-SemiBoldItalic.ttf in Resources */,
+				19004CDC28132A5D00B76651 /* AdventPro-SemiBold.ttf in Resources */,
+				19004CDD28132A5D00B76651 /* AdventPro-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
