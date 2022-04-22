@@ -11,7 +11,8 @@ class HomepageViewController: UIViewController
 {
     
     
-    @IBOutlet weak var hourlyWeatherView: UIView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     @IBOutlet weak var cloudLabel: UILabel!
     @IBOutlet weak var windyLabel: UILabel!
     @IBOutlet weak var sunsetLabel: UILabel!
@@ -27,7 +28,7 @@ class HomepageViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+       updateUI()
         search.delegate = self
         HomepageRouter.createModule(ref: self)
       
@@ -36,16 +37,13 @@ class HomepageViewController: UIViewController
     
     func updateUI()
     {
-        hourlyWeatherView.layer.masksToBounds = false
-        hourlyWeatherView.clipsToBounds = true
-        hourlyWeatherView.layer.cornerRadius = 50
-        hourlyWeatherView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        hourlyWeatherView.layer.shadowColor = UIColor.white.cgColor
-        hourlyWeatherView.layer.shadowOffset = CGSize(width: 0, height: -1)
-        hourlyWeatherView.layer.shadowOpacity = 0.6
-        hourlyWeatherView.layer.shadowRadius = 20
-       
+        backgroundImage.layer.masksToBounds = true
+        backgroundImage.layer.cornerRadius = 60
+        backgroundImage.layer.maskedCorners = [.layerMinXMaxYCorner]
+        backgroundImage.clipsToBounds = true
     }
+    
+ 
     
     override func viewWillAppear(_ animated: Bool) {
         homePresenterObject?.getCurrentWeather()
