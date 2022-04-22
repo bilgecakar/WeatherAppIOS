@@ -300,7 +300,7 @@
                         <outlet property="backgroundImage" destination="FIt-Tx-7Vu" id="jaU-Pq-nS4"/>
                         <outlet property="cityNameLabel" destination="JvT-zD-3l6" id="ujJ-qx-4l2"/>
                         <outlet property="cloudLabel" destination="kgw-jP-f85" id="hsd-Zb-Zlg"/>
-                        <outlet property="dateLabel" destination="FIt-Tx-7Vu" id="zv7-an-5Uc"/>
+                        <outlet property="dateLabel" destination="MbC-7j-xWB" id="Os6-It-Dni"/>
                         <outlet property="hourlyWeather" destination="NNX-cx-ze8" id="0Iy-ee-Qbc"/>
                         <outlet property="search" destination="Bpy-Hd-5fj" id="IL6-Wo-cWA"/>
                         <outlet property="shadowOneView" destination="eo5-2S-i0d" id="da5-g0-nwF"/>

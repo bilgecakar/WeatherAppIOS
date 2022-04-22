@@ -14,8 +14,8 @@
             filePath = "WeatherAppIOS/homepage-module/view/HomepageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "sendToDataView(weatherInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -33,7 +33,7 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "sendToDataPresenter(weatherInfo:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -66,6 +66,70 @@
             endingLineNumber = "36"
             landmarkName = "getCurrentWeather()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7141020-0698-4738-A746-3580155E4A12"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherAppIOS/homepage-module/view/HomepageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "sendToDataView(weatherInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7D4A57A-D5E6-4B89-B1D6-0C9A5BE1F459"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherAppIOS/homepage-module/view/HomepageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "sendToDataView(weatherInfo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E7D4A57A-D5E6-4B89-B1D6-0C9A5BE1F459 - deec6070596212e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in WeatherAppIOS.HomepageViewController.sendToDataView(weatherInfo: Swift.Array&lt;WeatherAppIOS.Weather&gt;) -&gt; ()"
+                  moduleName = "WeatherAppIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/WeatherAppIOS/WeatherAppIOS/homepage-module/view/HomepageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "543">
+               </Location>
+               <Location
+                  uuid = "E7D4A57A-D5E6-4B89-B1D6-0C9A5BE1F459 - deec6070596212e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in WeatherAppIOS.HomepageViewController.sendToDataView(weatherInfo: Swift.Array&lt;WeatherAppIOS.Weather&gt;) -&gt; ()"
+                  moduleName = "WeatherAppIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/WeatherAppIOS/WeatherAppIOS/homepage-module/view/HomepageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "1173">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

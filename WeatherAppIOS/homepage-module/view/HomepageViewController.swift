@@ -11,9 +11,8 @@ class HomepageViewController: UIViewController
 {
     
     
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
-    
-   
     @IBOutlet weak var shadowThreeView: UIView!
     @IBOutlet weak var shadowTwoView: UIView!
     @IBOutlet weak var shadowOneView: UIView!
@@ -21,13 +20,12 @@ class HomepageViewController: UIViewController
     @IBOutlet weak var cloudLabel: UILabel!
     @IBOutlet weak var windyLabel: UILabel!
     @IBOutlet weak var sunsetLabel: UILabel!
-    @IBOutlet weak var dateLabel: UIImageView!
     @IBOutlet weak var weatherTempLabel: UILabel!
     @IBOutlet weak var weatherDesc: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var search: UITextField!
     var weatherList = [Weather]()
-    
+    var weatherTime : String =  ""
     
     var homePresenterObject : ViewToPresenterHomepageProtocol?
     
@@ -88,14 +86,27 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
 {
     func sendToDataView(weatherInfo : Array<Weather>) {
         self.weatherList = weatherInfo
-     
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+  
+        
         DispatchQueue.main.async {
+            let dateString = self.weatherList[0].ob_time!
+            
+            if let date = dateFormatter.date(from: dateString) {
+              
+                dateFormatter.dateFormat = "MMM d, h:mm a"
+                dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+                self.weatherTime = dateFormatter.string(from: date)
+                
+            }
             self.cityNameLabel.text = self.weatherList[0].city_name!
             self.weatherTempLabel.text = "\(self.weatherList[0].temp!)°"
-            self.weatherDesc.text = "It's \(self.weatherList[0].weather?.description ?? "")"
+            self.weatherDesc.text = "\(self.weatherList[0].weather?.description ?? "")"
             self.sunsetLabel.text = self.weatherList[0].sunrise!
             self.windyLabel.text = "\(self.weatherList[0].wind_spd!) m/s"
             self.cloudLabel.text = "\(self.weatherList[0].clouds!) %"
+            self.dateLabel.text = self.weatherTime
             
         }
     }
