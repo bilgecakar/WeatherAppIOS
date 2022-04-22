@@ -26,16 +26,11 @@ class HomepageViewController: UIViewController
         
         search.delegate = self
         HomepageRouter.createModule(ref: self)
-        updateUI()
+      
         
     }
     
-    func updateUI()
-    {
-        weatherDesc.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
-    }
  
-    
     override func viewWillAppear(_ animated: Bool) {
         homePresenterObject?.getCurrentWeather()
        
@@ -56,10 +51,10 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
         DispatchQueue.main.async {
             self.cityNameLabel.text = self.weatherList[0].city_name!
             self.weatherTempLabel.text = "\(self.weatherList[0].temp!)°"
+            self.weatherDesc.text = "It's \(self.weatherList[0].weather?.description ?? "")"
             
         }
     }
-    
     
 }
 
