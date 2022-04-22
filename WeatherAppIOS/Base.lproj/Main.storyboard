@@ -139,8 +139,8 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wF-bMZ">
-                                <rect key="frame" x="32" y="210" width="106" height="83"/>
-                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="70"/>
+                                <rect key="frame" x="32" y="210" width="91" height="71.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -226,10 +226,13 @@
                     </view>
                     <connections>
                         <outlet property="cityNameLabel" destination="JvT-zD-3l6" id="ujJ-qx-4l2"/>
+                        <outlet property="cloudLabel" destination="kgw-jP-f85" id="hsd-Zb-Zlg"/>
                         <outlet property="dateLabel" destination="FIt-Tx-7Vu" id="zv7-an-5Uc"/>
                         <outlet property="search" destination="Bpy-Hd-5fj" id="IL6-Wo-cWA"/>
+                        <outlet property="sunsetLabel" destination="fGt-1B-4a8" id="1Xd-Io-H3T"/>
                         <outlet property="weatherDesc" destination="eLy-m5-g3L" id="o1o-Yo-LbM"/>
                         <outlet property="weatherTempLabel" destination="Ay2-wF-bMZ" id="yFR-2K-0Fg"/>
+                        <outlet property="windyLabel" destination="kdK-Jt-p2V" id="PyQ-dH-WM4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIT-lU-YNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

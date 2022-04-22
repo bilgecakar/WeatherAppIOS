@@ -14,6 +14,8 @@ class Weather : Codable
     var wind_spd : Double?
     var wind_cdir_full : String?
     var wind_cdir : String?
+    var sunrise : String?
+    var clouds : Int?
     var weather : WeatherDetail?
         
     init(city_name : String, temp : Double, wind_spd : Double, wind_cdir_full : String, wind_cdir : String   )

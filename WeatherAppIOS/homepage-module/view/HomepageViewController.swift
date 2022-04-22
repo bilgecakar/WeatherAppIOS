@@ -11,6 +11,9 @@ class HomepageViewController: UIViewController
 {
     
     
+    @IBOutlet weak var cloudLabel: UILabel!
+    @IBOutlet weak var windyLabel: UILabel!
+    @IBOutlet weak var sunsetLabel: UILabel!
     @IBOutlet weak var dateLabel: UIImageView!
     @IBOutlet weak var weatherTempLabel: UILabel!
     @IBOutlet weak var weatherDesc: UILabel!
@@ -52,6 +55,9 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
             self.cityNameLabel.text = self.weatherList[0].city_name!
             self.weatherTempLabel.text = "\(self.weatherList[0].temp!)°"
             self.weatherDesc.text = "It's \(self.weatherList[0].weather?.description ?? "")"
+            self.sunsetLabel.text = self.weatherList[0].sunrise!
+            self.windyLabel.text = "\(self.weatherList[0].wind_spd!) m/s"
+            self.cloudLabel.text = "\(self.weatherList[0].clouds!) %"
             
         }
     }
