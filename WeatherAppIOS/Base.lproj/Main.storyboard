@@ -101,7 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NightDay" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-Tx-7Vu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Daytime" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-Tx-7Vu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WTu-Ab-qro">
@@ -319,7 +319,7 @@
     </scenes>
     <resources>
         <image name="Banner" width="319.5" height="225"/>
-        <image name="NightDay" width="188" height="376"/>
+        <image name="Daytime" width="188" height="376"/>
         <image name="Pin" width="16" height="16"/>
         <image name="cloud.drizzle" catalog="system" width="125" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
