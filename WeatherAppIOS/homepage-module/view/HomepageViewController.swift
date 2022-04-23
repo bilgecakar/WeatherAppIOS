@@ -75,6 +75,10 @@ class HomepageViewController: UIViewController
         bottomLine.backgroundColor = UIColor.white.cgColor
         search.borderStyle = UITextField.BorderStyle.none
         search.layer.addSublayer(bottomLine)
+        search.attributedPlaceholder = NSAttributedString(
+            string: "London,UK",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray2]
+        )
         
         let collectionDesign = UICollectionViewFlowLayout()
         collectionDesign.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
