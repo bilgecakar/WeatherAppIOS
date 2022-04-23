@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class HomepageInteractor : PresenterToInteractorHomepageProtocol
 {
@@ -13,7 +14,7 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
     
     func getCurrentWeather() {
         
-        let url = URL(string: "https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=1b45ce95c85f49f489fd96cc081c71c7")!
+        let url = URL(string: "https://api.weatherbit.io/v2.0/current?city=Raleigh&country=US&key=1b45ce95c85f49f489fd96cc081c71c7")!
         URLSession.shared.dataTask(with: url){ data, response, error in
             
             if error != nil || data == nil
@@ -24,7 +25,7 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
             
             do
             {
-                let answer = try JSONDecoder().decode(WeatherResponse.self, from : data!)
+                let answer = try JSONDecoder().decode(WeatherResponse.self, from: data!)
                 var list = [Weather]()
                 if let answerList = answer.data
                 {
@@ -40,6 +41,37 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
                 print("JSON ERROR : \(error.localizedDescription)")
             }
             
+        }.resume()
+        
+    }
+    
+    func sevenDayWeather() {
+        let url = URL(string: "https://api.weatherbit.io/v2.0/forecast/daily?city=Raleigh&country=US&key=1b45ce95c85f49f489fd96cc081c71c7")!
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if error != nil || data == nil
+            {
+                print("Hata")
+                return
+            }
+            
+            do
+            {
+                let answer = try JSONDecoder().decode(WeatherForecastResponse.self, from: data!)
+                var listTwo = [WeatherForecast]()
+                if let answerWeatherList = answer.data
+                {
+                    listTwo = answerWeatherList
+                }
+                print(listTwo)
+                
+                self.homePresenter?.sendToDataPresenter(weatherInfo: listTwo)
+                
+            }
+            catch
+            {
+                print("JSON ERROR : \(error.localizedDescription)")
+            }
         }.resume()
         
     }

@@ -13,22 +13,27 @@ protocol ViewToPresenterHomepageProtocol
     var homeView : PresenterToViewHomepageProtocol? {get set}
     
     func getCurrentWeather()
+    func sevenDayWeather()
 }
 protocol PresenterToInteractorHomepageProtocol
 {
     var homePresenter : InteractorToPresenterHomepageProtocol? {get set}
     
     func getCurrentWeather()
+    func sevenDayWeather()
 }
 protocol InteractorToPresenterHomepageProtocol
 {
     func sendToDataPresenter(weatherInfo : Array<Weather>)
+    func sendToDataPresenter(weatherInfo : Array<WeatherForecast>)
 }
 protocol PresenterToViewHomepageProtocol
 {
     func sendToDataView(weatherInfo : Array<Weather>)
+    func sendToDataView(weatherInfo : Array<WeatherForecast>)
 }
 protocol PresenterToRouterHomepageProtocol
 {
     static func createModule(ref:HomepageViewController)
+    
 }

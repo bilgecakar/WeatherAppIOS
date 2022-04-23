@@ -27,7 +27,8 @@ class HomepageViewController: UIViewController
     @IBOutlet weak var search: UITextField!
     var weatherList = [Weather]()
     var weatherTime : String =  ""
-    
+    var weatherForecast = [WeatherForecast]()
+                                                                            
     var homePresenterObject : ViewToPresenterHomepageProtocol?
     
     override func viewDidLoad() {
@@ -75,11 +76,21 @@ class HomepageViewController: UIViewController
         search.borderStyle = UITextField.BorderStyle.none
         search.layer.addSublayer(bottomLine)
         
+        let collectionDesign = UICollectionViewFlowLayout()
+        collectionDesign.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        collectionDesign.minimumInteritemSpacing = 5
+        collectionDesign.minimumLineSpacing = 5
+        let width = self.weatherCollectionView.frame.size.width
+        let cellWidth = (width-20) / 3
+        collectionDesign.itemSize = CGSize(width: cellWidth, height: cellWidth*1.5)
+        weatherCollectionView.collectionViewLayout = collectionDesign
+        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         homePresenterObject?.getCurrentWeather()
+        homePresenterObject?.sevenDayWeather()
        
     }
     
@@ -118,6 +129,13 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
         }
     }
     
+    func sendToDataView(weatherInfo: Array<WeatherForecast>) {
+        self.weatherForecast = weatherInfo
+        DispatchQueue.main.async {
+            self.weatherCollectionView.reloadData()
+        }
+    }
+    
 }
 
 
@@ -149,12 +167,25 @@ extension HomepageViewController : UITextFieldDelegate
 extension HomepageViewController : UICollectionViewDelegate, UICollectionViewDataSource
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return weatherList.count
+        return  weatherForecast.count - 13
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let waether = weatherList[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weathercell", for: indexPath) as! WeatherCollectionViewCell
+        let weatherForecast = weatherForecast[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weatherCell", for: indexPath) as! WeatherCollectionViewCell
+        cell.weatherTemp.text = "\(weatherForecast.temp!)°"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = weatherForecast.datetime!
+        
+        if let date = dateFormatter.date(from: dateString) {
+          
+            dateFormatter.dateFormat = "MMM d"
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            cell.weatherDay.text = dateFormatter.string(from: date)
+            
+        }
+        
         return cell
     }
     

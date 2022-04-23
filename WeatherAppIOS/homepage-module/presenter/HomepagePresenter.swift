@@ -17,12 +17,19 @@ class HomepagePresenter : ViewToPresenterHomepageProtocol
         homeInteractor?.getCurrentWeather()
     }
     
+    func sevenDayWeather() {
+        homeInteractor?.sevenDayWeather()
+    }
+    
     
 }
 
 extension HomepagePresenter : InteractorToPresenterHomepageProtocol
 {
     func sendToDataPresenter(weatherInfo : Array<Weather>) {
+        homeView?.sendToDataView(weatherInfo: weatherInfo)
+    }
+    func sendToDataPresenter(weatherInfo: Array<WeatherForecast>) {
         homeView?.sendToDataView(weatherInfo: weatherInfo)
     }
     
