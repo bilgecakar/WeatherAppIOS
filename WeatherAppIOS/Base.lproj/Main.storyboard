@@ -369,6 +369,7 @@
                         <outlet property="shadowThreeView" destination="j1O-9z-SfM" id="s77-ms-fun"/>
                         <outlet property="shadowTwoView" destination="IWS-Dw-rs5" id="S1p-B9-obY"/>
                         <outlet property="sunsetLabel" destination="fGt-1B-4a8" id="1Xd-Io-H3T"/>
+                        <outlet property="weatherCollectionView" destination="GeN-fW-mv1" id="l5o-Yr-Vlk"/>
                         <outlet property="weatherDesc" destination="eLy-m5-g3L" id="o1o-Yo-LbM"/>
                         <outlet property="weatherTempLabel" destination="Ay2-wF-bMZ" id="yFR-2K-0Fg"/>
                         <outlet property="windyLabel" destination="kdK-Jt-p2V" id="PyQ-dH-WM4"/>

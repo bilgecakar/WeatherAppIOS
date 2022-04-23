@@ -11,6 +11,7 @@ class HomepageViewController: UIViewController
 {
     
     
+    @IBOutlet weak var weatherCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var shadowThreeView: UIView!
@@ -33,6 +34,8 @@ class HomepageViewController: UIViewController
         super.viewDidLoad()
        updateUI()
         search.delegate = self
+        weatherCollectionView.delegate = self
+        weatherCollectionView.dataSource = self
         HomepageRouter.createModule(ref: self)
       
         let hour = Calendar.current.component(.hour, from: Date())
@@ -57,7 +60,6 @@ class HomepageViewController: UIViewController
         shadowOneView.layer.cornerRadius = 45
         shadowOneView.clipsToBounds = true
 
-        
         shadowTwoView.layer.masksToBounds = false
         shadowTwoView.layer.cornerRadius = 40
         shadowTwoView.clipsToBounds = true
@@ -73,17 +75,13 @@ class HomepageViewController: UIViewController
         search.borderStyle = UITextField.BorderStyle.none
         search.layer.addSublayer(bottomLine)
         
-        
-
     }
     
- 
     
     override func viewWillAppear(_ animated: Bool) {
         homePresenterObject?.getCurrentWeather()
        
     }
-    
     
     @IBAction func searcPressed(_ sender: Any){
         search.endEditing(true)
@@ -146,4 +144,19 @@ extension HomepageViewController : UITextFieldDelegate
     func textFieldDidEndEditing(_ textField: UITextField) {
         search.text = ""
     }
+}
+
+extension HomepageViewController : UICollectionViewDelegate, UICollectionViewDataSource
+{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return weatherList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let waether = weatherList[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weathercell", for: indexPath) as! WeatherCollectionViewCell
+        return cell
+    }
+    
+    
 }
