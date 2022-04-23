@@ -38,12 +38,12 @@ class HomepageViewController: UIViewController
         let hour = Calendar.current.component(.hour, from: Date())
         print(hour)
         switch hour {
-        case 1...18:
+        case 5...18:
                 backgroundImage.image = UIImage(named:"Daytime")
             case 18...24:
             backgroundImage.image = UIImage(named: "NightDay")
             default:
-            backgroundImage.image = UIImage(named:"Daytime")
+            backgroundImage.image = UIImage(named:"NightDay")
          }
     }
     

@@ -17,7 +17,7 @@
             startingLineNumber = "97"
             endingLineNumber = "97"
             landmarkName = "sendToDataView(weatherInfo:)"
-            landmarkType = "7">
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -81,7 +81,7 @@
             startingLineNumber = "103"
             endingLineNumber = "103"
             landmarkName = "sendToDataView(weatherInfo:)"
-            landmarkType = "7">
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -97,7 +97,7 @@
             startingLineNumber = "105"
             endingLineNumber = "105"
             landmarkName = "sendToDataView(weatherInfo:)"
-            landmarkType = "7">
+            landmarkType = "9">
             <Locations>
                <Location
                   uuid = "E7D4A57A-D5E6-4B89-B1D6-0C9A5BE1F459 - deec6070596212e1"
