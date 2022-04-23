@@ -28,27 +28,27 @@ class HomepageViewController: UIViewController
     var weatherList = [Weather]()
     var weatherTime : String =  ""
     var weatherForecast = [WeatherForecast]()
-                                                                            
+    
     var homePresenterObject : ViewToPresenterHomepageProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       updateUI()
+        updateUI()
         search.delegate = self
         weatherCollectionView.delegate = self
         weatherCollectionView.dataSource = self
         HomepageRouter.createModule(ref: self)
-      
+        
         let hour = Calendar.current.component(.hour, from: Date())
         print(hour)
         switch hour {
         case 5...18:
-                backgroundImage.image = UIImage(named:"Daytime")
-            case 18...24:
+            backgroundImage.image = UIImage(named:"Daytime")
+        case 18...24:
             backgroundImage.image = UIImage(named: "NightDay")
-            default:
+        default:
             backgroundImage.image = UIImage(named:"NightDay")
-         }
+        }
     }
     
     func updateUI()
@@ -60,11 +60,11 @@ class HomepageViewController: UIViewController
         shadowOneView.layer.masksToBounds = false
         shadowOneView.layer.cornerRadius = 45
         shadowOneView.clipsToBounds = true
-
+        
         shadowTwoView.layer.masksToBounds = false
         shadowTwoView.layer.cornerRadius = 40
         shadowTwoView.clipsToBounds = true
-
+        
         
         shadowThreeView.layer.masksToBounds = false
         shadowThreeView.layer.cornerRadius = 35
@@ -89,14 +89,21 @@ class HomepageViewController: UIViewController
     
     
     override func viewWillAppear(_ animated: Bool) {
-        homePresenterObject?.getCurrentWeather()
+        
         homePresenterObject?.sevenDayWeather()
-       
+        
     }
     
     @IBAction func searcPressed(_ sender: Any){
-        search.endEditing(true)
+        
         print(search.text!)
+        
+        let searching : [String] = (search.text?.components(separatedBy: ","))!
+        print(searching[0])
+        
+        homePresenterObject?.getCurrentWeather(cityName : searching[0], counrty : searching[1])
+        
+        search.endEditing(true)
     }
     
 }
@@ -106,13 +113,13 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
         self.weatherList = weatherInfo
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-  
+        
         
         DispatchQueue.main.async {
             let dateString = self.weatherList[0].ob_time!
             
             if let date = dateFormatter.date(from: dateString) {
-              
+                
                 dateFormatter.dateFormat = "MMM d, h:mm a"
                 dateFormatter.locale = Locale(identifier: "en_US_POSIX")
                 self.weatherTime = dateFormatter.string(from: date)
@@ -179,7 +186,7 @@ extension HomepageViewController : UICollectionViewDelegate, UICollectionViewDat
         let dateString = weatherForecast.datetime!
         
         if let date = dateFormatter.date(from: dateString) {
-          
+            
             dateFormatter.dateFormat = "MMM d"
             dateFormatter.locale = Locale(identifier: "en_US_POSIX")
             cell.weatherDay.text = dateFormatter.string(from: date)

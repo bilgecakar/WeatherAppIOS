@@ -12,14 +12,14 @@ protocol ViewToPresenterHomepageProtocol
     var homeInteractor : PresenterToInteractorHomepageProtocol? {get set}
     var homeView : PresenterToViewHomepageProtocol? {get set}
     
-    func getCurrentWeather()
+    func getCurrentWeather(cityName : String, counrty : String)
     func sevenDayWeather()
 }
 protocol PresenterToInteractorHomepageProtocol
 {
     var homePresenter : InteractorToPresenterHomepageProtocol? {get set}
     
-    func getCurrentWeather()
+    func getCurrentWeather(cityName : String, counrty : String)
     func sevenDayWeather()
 }
 protocol InteractorToPresenterHomepageProtocol
