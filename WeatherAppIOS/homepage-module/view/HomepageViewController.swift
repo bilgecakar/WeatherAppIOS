@@ -171,7 +171,7 @@ extension HomepageViewController : UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let weatherForecast = weatherForecast[indexPath.row]
+        let weatherForecast = weatherForecast[indexPath.row + 1]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weatherCell", for: indexPath) as! WeatherCollectionViewCell
         cell.weatherTemp.text = "\(weatherForecast.temp!)°"
         let dateFormatter = DateFormatter()
