@@ -12,10 +12,10 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
 {
     var homePresenter: InteractorToPresenterHomepageProtocol?
     
-    func getCurrentWeather(cityName : String, counrty : String) {
+    func getCurrentWeather(cityName : String) {
         
         
-        let url = URL(string: "https://api.weatherbit.io/v2.0/current?city=\(cityName)&country=\(counrty)&key=1b45ce95c85f49f489fd96cc081c71c7")!
+        let url = URL(string: "https://api.weatherbit.io/v2.0/current?city=\(cityName)&key=1b45ce95c85f49f489fd96cc081c71c7")!
    
         
         URLSession.shared.dataTask(with: url){ data, response, error in

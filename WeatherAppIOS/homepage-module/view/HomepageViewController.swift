@@ -76,7 +76,7 @@ class HomepageViewController: UIViewController
         search.borderStyle = UITextField.BorderStyle.none
         search.layer.addSublayer(bottomLine)
         search.attributedPlaceholder = NSAttributedString(
-            string: "London,UK",
+            string: "London",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray2]
         )
         
@@ -102,10 +102,12 @@ class HomepageViewController: UIViewController
         
         print(search.text!)
         
-        let searching : [String] = (search.text?.components(separatedBy: ","))!
-        print(searching[0])
+        if let cityName =  search.text
+        {
+            homePresenterObject?.getCurrentWeather(cityName : cityName)
+        }
         
-        homePresenterObject?.getCurrentWeather(cityName : searching[0], counrty : searching[1])
+
         
         search.endEditing(true)
     }

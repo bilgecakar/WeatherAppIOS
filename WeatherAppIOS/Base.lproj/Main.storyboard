@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-sH-35P">
-                                <rect key="frame" x="100" y="680.5" width="214" height="41.5"/>
+                                <rect key="frame" x="100" y="680.5" width="214" height="41"/>
                                 <color key="backgroundColor" name="PrimaryColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -104,14 +104,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WTu-Ab-qro">
-                                <rect key="frame" x="32" y="74" width="350" height="34"/>
+                                <rect key="frame" x="32" y="74" width="350" height="38.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpy-Hd-5fj">
-                                        <rect key="frame" x="0.0" y="0.0" width="294.5" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="294.5" height="38.5"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -120,7 +120,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbd-Wr-gn0">
-                                        <rect key="frame" x="304.5" y="0.0" width="45.5" height="34"/>
+                                        <rect key="frame" x="304.5" y="0.0" width="45.5" height="38.5"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title=""/>
@@ -131,7 +131,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LKR-cZ-2EE">
-                                <rect key="frame" x="32" y="138" width="125" height="62"/>
+                                <rect key="frame" x="32" y="142.5" width="125" height="62"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S5Y-QE-joI">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="35"/>
@@ -157,7 +157,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="spg-lF-ZER">
-                                <rect key="frame" x="284.5" y="228" width="89.5" height="86"/>
+                                <rect key="frame" x="284.5" y="232.5" width="89.5" height="86"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCo-EY-0Pc">
                                         <rect key="frame" x="0.0" y="0.0" width="89.5" height="60"/>
@@ -184,22 +184,22 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1O-9z-SfM" userLabel="ShadowThree">
-                                <rect key="frame" x="0.0" y="575" width="414" height="287"/>
+                                <rect key="frame" x="0.0" y="579.5" width="414" height="282.5"/>
                                 <color key="backgroundColor" white="1" alpha="0.12681801903326784" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWS-Dw-rs5" userLabel="ShadowTwo">
-                                <rect key="frame" x="0.0" y="582" width="414" height="314"/>
+                                <rect key="frame" x="0.0" y="586.5" width="414" height="309.5"/>
                                 <color key="backgroundColor" white="1" alpha="0.20452587809783734" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eo5-2S-i0d" userLabel="ShadowOne">
-                                <rect key="frame" x="0.0" y="589" width="414" height="307"/>
+                                <rect key="frame" x="0.0" y="593.5" width="414" height="302.5"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNX-cx-ze8">
-                                <rect key="frame" x="0.0" y="596" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="600.5" width="414" height="295.5"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-fW-mv1">
-                                        <rect key="frame" x="32" y="69" width="350" height="181"/>
+                                        <rect key="frame" x="32" y="69" width="350" height="176.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vn1-c9-cRo">
                                             <size key="itemSize" width="128" height="128"/>
@@ -273,7 +273,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="seC-3N-PUh">
-                                <rect key="frame" x="264.5" y="344" width="117.5" height="48"/>
+                                <rect key="frame" x="264.5" y="348.5" width="117.5" height="48"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tYe-cf-aL3">
                                         <rect key="frame" x="0.0" y="0.0" width="32.5" height="48"/>
