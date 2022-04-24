@@ -157,10 +157,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="spg-lF-ZER">
-                                <rect key="frame" x="284.5" y="232.5" width="89.5" height="86"/>
+                                <rect key="frame" x="283" y="232.5" width="91" height="86"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCo-EY-0Pc">
-                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wF-bMZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="62" height="60"/>
@@ -168,15 +168,15 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.drizzle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jC4-Pd-IOd">
-                                                <rect key="frame" x="62" y="-3" width="27.5" height="68.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jC4-Pd-IOd">
+                                                <rect key="frame" x="62" y="-1" width="29" height="61"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="light"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLy-m5-g3L">
-                                        <rect key="frame" x="0.0" y="62" width="89.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="62" width="91" height="24"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Light" family="Advent Pro" pointSize="20"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -373,6 +373,7 @@
                         <outlet property="sunsetLabel" destination="fGt-1B-4a8" id="1Xd-Io-H3T"/>
                         <outlet property="weatherCollectionView" destination="GeN-fW-mv1" id="l5o-Yr-Vlk"/>
                         <outlet property="weatherDesc" destination="eLy-m5-g3L" id="o1o-Yo-LbM"/>
+                        <outlet property="weatherIconIamge" destination="jC4-Pd-IOd" id="PGy-Oh-ULv"/>
                         <outlet property="weatherTempLabel" destination="Ay2-wF-bMZ" id="yFR-2K-0Fg"/>
                         <outlet property="windyLabel" destination="kdK-Jt-p2V" id="PyQ-dH-WM4"/>
                     </connections>
@@ -386,7 +387,7 @@
         <image name="Banner" width="319.5" height="225"/>
         <image name="Daytime" width="188" height="376"/>
         <image name="Pin" width="16" height="16"/>
-        <image name="cloud.drizzle" catalog="system" width="125" height="128"/>
+        <image name="cloud" catalog="system" width="128" height="88"/>
         <image name="cloud.sun" catalog="system" width="128" height="95"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="sunrise.fill" catalog="system" width="128" height="97"/>

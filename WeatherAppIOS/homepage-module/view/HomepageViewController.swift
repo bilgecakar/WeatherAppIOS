@@ -10,6 +10,7 @@ import UIKit
 class HomepageViewController: UIViewController
 {
     
+    @IBOutlet weak var weatherIconIamge: UIImageView!
     
     @IBOutlet weak var weatherCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -28,6 +29,7 @@ class HomepageViewController: UIViewController
     var weatherList = [Weather]()
     var weatherTime : String =  ""
     var weatherForecast = [WeatherForecast]()
+    var icons : WeatherIcons?
     
     var homePresenterObject : ViewToPresenterHomepageProtocol?
     
@@ -130,14 +132,17 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
                 dateFormatter.locale = Locale(identifier: "en_US_POSIX")
                 self.weatherTime = dateFormatter.string(from: date)
                 
+                
             }
+            print(self.weatherList[0].weather?.getIcon())
             self.cityNameLabel.text = self.weatherList[0].city_name!
             self.weatherTempLabel.text = "\(self.weatherList[0].temp!)°"
-            self.weatherDesc.text = "\(self.weatherList[0].weather?.description ?? "")"
+            self.weatherDesc.text = self.weatherList[0].weather?.description ?? ""
             self.sunsetLabel.text = self.weatherList[0].sunrise!
             self.windyLabel.text = "\(self.weatherList[0].wind_spd!) m/s"
             self.cloudLabel.text = "\(self.weatherList[0].clouds!) %"
             self.dateLabel.text = self.weatherTime
+            self.weatherIconIamge.image = UIImage(systemName: (self.weatherList[0].weather?.getIcon())!)
             
         }
     }
