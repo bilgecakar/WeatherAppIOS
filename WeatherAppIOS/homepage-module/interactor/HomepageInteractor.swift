@@ -48,8 +48,8 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
         
     }
     
-    func sevenDayWeather() {
-        let url = URL(string: "https://api.weatherbit.io/v2.0/forecast/daily?city=Raleigh&country=US&key=1b45ce95c85f49f489fd96cc081c71c7")!
+    func sevenDayWeather(cityName : String) {
+        let url = URL(string: "https://api.weatherbit.io/v2.0/forecast/daily?city=\(cityName)&key=1b45ce95c85f49f489fd96cc081c71c7")!
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             if error != nil || data == nil

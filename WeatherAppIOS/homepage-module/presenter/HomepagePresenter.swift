@@ -17,8 +17,8 @@ class HomepagePresenter : ViewToPresenterHomepageProtocol
         homeInteractor?.getCurrentWeather(cityName : cityName)
     }
     
-    func sevenDayWeather() {
-        homeInteractor?.sevenDayWeather()
+    func sevenDayWeather(cityName : String) {
+        homeInteractor?.sevenDayWeather(cityName : cityName)
     }
     
     

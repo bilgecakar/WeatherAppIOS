@@ -29,7 +29,7 @@ class HomepageViewController: UIViewController
     var weatherList = [Weather]()
     var weatherTime : String =  ""
     var weatherForecast = [WeatherForecast]()
-    var icons : WeatherIcons?
+    
     
     var homePresenterObject : ViewToPresenterHomepageProtocol?
     
@@ -78,8 +78,8 @@ class HomepageViewController: UIViewController
         search.borderStyle = UITextField.BorderStyle.none
         search.layer.addSublayer(bottomLine)
         search.attributedPlaceholder = NSAttributedString(
-            string: "London",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray2]
+            string: "City Name",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray3]
         )
         
         let collectionDesign = UICollectionViewFlowLayout()
@@ -96,7 +96,9 @@ class HomepageViewController: UIViewController
     
     override func viewWillAppear(_ animated: Bool) {
         
-        homePresenterObject?.sevenDayWeather()
+        //Deafult London
+        homePresenterObject?.sevenDayWeather(cityName: "London")
+        homePresenterObject?.getCurrentWeather(cityName : "London")
         
     }
     
@@ -107,6 +109,7 @@ class HomepageViewController: UIViewController
         if let cityName =  search.text
         {
             homePresenterObject?.getCurrentWeather(cityName : cityName)
+            homePresenterObject?.sevenDayWeather(cityName: cityName)
         }
         
 
@@ -134,7 +137,7 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
                 
                 
             }
-            print(self.weatherList[0].weather?.getIcon())
+            
             self.cityNameLabel.text = self.weatherList[0].city_name!
             self.weatherTempLabel.text = "\(self.weatherList[0].temp!)°"
             self.weatherDesc.text = self.weatherList[0].weather?.description ?? ""
