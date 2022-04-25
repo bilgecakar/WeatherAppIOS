@@ -41,16 +41,7 @@ class HomepageViewController: UIViewController
         weatherCollectionView.dataSource = self
         HomepageRouter.createModule(ref: self)
         
-        let hour = Calendar.current.component(.hour, from: Date())
-        print(hour)
-        switch hour {
-        case 5...18:
-            backgroundImage.image = UIImage(named:"Daytime")
-        case 18...24:
-            backgroundImage.image = UIImage(named: "NightDay")
-        default:
-            backgroundImage.image = UIImage(named:"NightDay")
-        }
+      
     }
     
     func updateUI()
@@ -95,6 +86,17 @@ class HomepageViewController: UIViewController
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        let hour = Calendar.current.component(.hour, from: Date())
+        print(hour)
+        switch hour {
+        case 5...18:
+            backgroundImage.image = UIImage(named:"Daytime")
+        case 18...24:
+            backgroundImage.image = UIImage(named: "NightDay")
+        default:
+            backgroundImage.image = UIImage(named:"NightDay")
+        }
         
         //Deafult London
         homePresenterObject?.sevenDayWeather(cityName: "London")
@@ -194,6 +196,7 @@ extension HomepageViewController : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let weatherForecast = weatherForecast[indexPath.row + 1]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weatherCell", for: indexPath) as! WeatherCollectionViewCell
+        cell.weatherImage.image = UIImage(systemName: (weatherForecast.weather?.getIcon())!)
         cell.weatherTemp.text = "\(weatherForecast.temp!)°"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"

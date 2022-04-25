@@ -10,6 +10,7 @@ class WeatherForecast : Codable
 {
     var temp : Double?
     var datetime : String?
+    var weather : WeatherDetail?
     
     init(temp : Double, datetime : String)
     {
