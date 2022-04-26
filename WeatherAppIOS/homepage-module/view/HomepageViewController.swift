@@ -143,10 +143,11 @@ class HomepageViewController: UIViewController
        
        
         
-        if search.text == ""
+        if search.text == "" || search.text!.count < 4
         {
             performSegue(withIdentifier: "toError", sender: nil)
-            print("Hataaa")
+            search.text = ""
+            
             return
         }else
         {
