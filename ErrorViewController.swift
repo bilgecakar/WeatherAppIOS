@@ -35,6 +35,6 @@ class ErrorViewController: UIViewController {
 
 
     @IBAction func tryAgain(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+       dismiss(animated: true)
     }
 }
