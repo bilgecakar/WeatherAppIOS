@@ -14,7 +14,7 @@ class Weather : Codable
     var wind_spd : Double?
     var wind_cdir_full : String?
     var wind_cdir : String?
-    var sunrise : String?
+    var sunset : String?
     var ob_time : String?
     var clouds : Int?
     var weather : WeatherDetail?

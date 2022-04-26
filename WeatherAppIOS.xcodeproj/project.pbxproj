@@ -229,7 +229,6 @@
 		19630A29280CD7A600C90C53 = {
 			isa = PBXGroup;
 			children = (
-				1912757C2818414A00DF7DDD /* ErrorViewController.swift */,
 				19630A34280CD7A600C90C53 /* WeatherAppIOS */,
 				19630A4B280CD7A900C90C53 /* WeatherAppIOSTests */,
 				19630A55280CD7A900C90C53 /* WeatherAppIOSUITests */,
@@ -255,6 +254,7 @@
 				190407C8280EE636008FFE50 /* homepage-module */,
 				19630A65280CE36F00C90C53 /* Fonts */,
 				19630A35280CD7A600C90C53 /* AppDelegate.swift */,
+				1912757C2818414A00DF7DDD /* ErrorViewController.swift */,
 				19630A37280CD7A600C90C53 /* SceneDelegate.swift */,
 				19630A39280CD7A600C90C53 /* ViewController.swift */,
 				19630A3B280CD7A600C90C53 /* Main.storyboard */,
