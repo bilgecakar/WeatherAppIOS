@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ViewAnimator",
+        "repositoryURL": "https://github.com/marcosgriselli/ViewAnimator",
+        "state": {
+          "branch": "master",
+          "revision": "55f1c46241b181c3e0b68d70edb6d87926c7d183",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -37,6 +37,7 @@
 		190407DD28102522008FFE50 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190407DC28102521008FFE50 /* WeatherResponse.swift */; };
 		190E63562814589C003201C9 /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E63552814589C003201C9 /* WeatherForecast.swift */; };
 		190E635828145909003201C9 /* WeatherForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E635728145909003201C9 /* WeatherForecastResponse.swift */; };
+		1912756F2818000800DF7DDD /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = 1912756E2818000800DF7DDD /* ViewAnimator */; };
 		19200C562812DC550062F8DF /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19200C552812DC550062F8DF /* WeatherDetail.swift */; };
 		19630A36280CD7A600C90C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A35280CD7A600C90C53 /* AppDelegate.swift */; };
 		19630A38280CD7A600C90C53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A37280CD7A600C90C53 /* SceneDelegate.swift */; };
@@ -120,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1912756F2818000800DF7DDD /* ViewAnimator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +305,9 @@
 			dependencies = (
 			);
 			name = WeatherAppIOS;
+			packageProductDependencies = (
+				1912756E2818000800DF7DDD /* ViewAnimator */,
+			);
 			productName = WeatherAppIOS;
 			productReference = 19630A32280CD7A600C90C53 /* WeatherAppIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -375,6 +380,9 @@
 				Base,
 			);
 			mainGroup = 19630A29280CD7A600C90C53;
+			packageReferences = (
+				1912756D2818000800DF7DDD /* XCRemoteSwiftPackageReference "ViewAnimator" */,
+			);
 			productRefGroup = 19630A33280CD7A600C90C53 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -796,6 +804,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1912756D2818000800DF7DDD /* XCRemoteSwiftPackageReference "ViewAnimator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcosgriselli/ViewAnimator";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1912756E2818000800DF7DDD /* ViewAnimator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1912756D2818000800DF7DDD /* XCRemoteSwiftPackageReference "ViewAnimator" */;
+			productName = ViewAnimator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 19630A2A280CD7A600C90C53 /* Project object */;
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class HomepageViewController: UIViewController
 {
@@ -106,49 +107,58 @@ class HomepageViewController: UIViewController
     
     override func viewDidAppear(_ animated: Bool) {
         
-        
-     
-        
+       
         
         UIView.animate(withDuration: 0.3, animations:  {
             
             
-                self.shadowThreeView.transform = CGAffineTransform(translationX: 0, y: -40)
+                self.shadowThreeView.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
         UIView.animate(withDuration: 0.8, animations:  {
             
-                self.shadowTwoView.transform = CGAffineTransform(translationX: 0, y: -40)
+                self.shadowTwoView.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
         UIView.animate(withDuration: 1.3, animations:  {
             
       
             
-                self.shadowOneView.transform = CGAffineTransform(translationX: 0, y: -40)
+                self.shadowOneView.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
         UIView.animate(withDuration: 1.8, animations:  {
             
       
-                self.hourlyWeather.transform = CGAffineTransform(translationX: 0, y: -40)
+                self.hourlyWeather.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
-    }
+        
+        animate()
+        
+            }
     
     @IBAction func searcPressed(_ sender: Any){
         
         print(search.text!)
-        
+       
         if let cityName =  search.text
         {
             homePresenterObject?.getCurrentWeather(cityName : cityName)
             homePresenterObject?.sevenDayWeather(cityName: cityName)
         }
         
-
+      
         
+     
         search.endEditing(true)
+    }
+    
+    func animate()
+    {
+        let animation = AnimationType.zoom(scale: 0.5)
+        UIView.animate(views : weatherCollectionView.visibleCells, animations: [animation])
+        
     }
     
 }
@@ -186,10 +196,22 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
     
     func sendToDataView(weatherInfo: Array<WeatherForecast>) {
         self.weatherForecast = weatherInfo
-        DispatchQueue.main.async {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.33, execute:
+                                        {
             self.weatherCollectionView.reloadData()
-        }
-    }
+            self.weatherCollectionView.performBatchUpdates({
+                self.animate()
+            })
+        })
+           
+      
+        
+       
+      
+        
+        
+            }
     
 }
 
@@ -244,6 +266,8 @@ extension HomepageViewController : UICollectionViewDelegate, UICollectionViewDat
         
         return cell
     }
+    
+    
     
     
 }
