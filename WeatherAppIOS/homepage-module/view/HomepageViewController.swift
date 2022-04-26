@@ -15,7 +15,6 @@ class HomepageViewController: UIViewController
     @IBOutlet weak var pulse: AnimationView!
     @IBOutlet weak var searchButonUI: UIButton!
     @IBOutlet weak var weatherIconIamge: UIImageView!
-    
     @IBOutlet weak var weatherCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -44,6 +43,7 @@ class HomepageViewController: UIViewController
         weatherCollectionView.delegate = self
         weatherCollectionView.dataSource = self
         HomepageRouter.createModule(ref: self)
+        pulse.play()
                 
     }
     

@@ -131,23 +131,23 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LKR-cZ-2EE">
-                                <rect key="frame" x="32" y="142.5" width="105" height="105"/>
+                                <rect key="frame" x="32" y="142.5" width="125" height="105"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S5Y-QE-joI">
-                                        <rect key="frame" x="0.0" y="0.0" width="105" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmI-66-C91" customClass="AnimationView" customModule="Lottie">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="5" width="40" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="Sqy-At-zHX"/>
-                                                    <constraint firstAttribute="height" constant="50" id="g74-fX-Fib"/>
+                                                    <constraint firstAttribute="width" constant="40" id="Sqy-At-zHX"/>
+                                                    <constraint firstAttribute="height" constant="40" id="g74-fX-Fib"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="locate"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
-                                                <rect key="frame" x="55" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="45" y="0.0" width="80" height="50"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-SemiBold" family="Advent Pro" pointSize="29"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -155,7 +155,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-7j-xWB" userLabel="Monday  2:45">
-                                        <rect key="frame" x="0.0" y="55" width="105" height="50"/>
+                                        <rect key="frame" x="0.0" y="55" width="125" height="50"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Light" family="Advent Pro" pointSize="18"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
