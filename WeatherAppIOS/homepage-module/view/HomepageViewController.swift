@@ -32,7 +32,7 @@ class HomepageViewController: UIViewController
     var weatherList = [Weather]()
     var weatherTime : String =  ""
     var weatherForecast = [WeatherForecast]()
-    
+   
     
     var homePresenterObject : ViewToPresenterHomepageProtocol?
     
@@ -90,20 +90,21 @@ class HomepageViewController: UIViewController
     
     override func viewWillAppear(_ animated: Bool) {
         
+        //Deafult Oshawa/Canada
+        homePresenterObject?.sevenDayWeather(cityName: "Ottawa")
+        homePresenterObject?.getCurrentWeather(cityName : "Ottawa")
+        
         let hour = Calendar.current.component(.hour, from: Date())
         
         switch hour {
         case 5...18:
-            backgroundImage.image = UIImage(named:"Daytime")
+            self.backgroundImage.image = UIImage(named:"Daytime")
         case 18...24:
-            backgroundImage.image = UIImage(named: "NightDay")
+            self.backgroundImage.image = UIImage(named: "NightDay")
         default:
-            backgroundImage.image = UIImage(named:"NightDay")
+            self.backgroundImage.image = UIImage(named:"NightDay")
         }
         
-        //Deafult Oshawa/Canada
-        homePresenterObject?.sevenDayWeather(cityName: "Oshawa")
-        homePresenterObject?.getCurrentWeather(cityName : "Oshawa")
         
     }
     
@@ -183,16 +184,24 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
         
         
         DispatchQueue.main.async {
+           
+            
             let dateString = self.weatherList[0].ob_time!
             
+            dateFormatter.timeZone = TimeZone(identifier: "UTC")
+           
             if let date = dateFormatter.date(from: dateString) {
                 
-                dateFormatter.dateFormat = "MMM d, h:mm a"
+                
+                dateFormatter.dateFormat = "MMM d, yyyy"
+               
                 dateFormatter.locale = Locale(identifier: "en_CA")
                
                 self.weatherTime = dateFormatter.string(from: date)
                 
+        
                 
+              
             }
             
             self.cityNameLabel.text = self.weatherList[0].city_name!
