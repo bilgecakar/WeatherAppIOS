@@ -39,9 +39,8 @@
 		190E635828145909003201C9 /* WeatherForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E635728145909003201C9 /* WeatherForecastResponse.swift */; };
 		1912756F2818000800DF7DDD /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = 1912756E2818000800DF7DDD /* ViewAnimator */; };
 		19127572281814C100DF7DDD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 19127571281814C100DF7DDD /* Lottie */; };
-		191275752818167500DF7DDD /* pulse.json in Resources */ = {isa = PBXBuildFile; fileRef = 191275742818167500DF7DDD /* pulse.json */; };
-		191275772818197800DF7DDD /* WhitePulse.json in Resources */ = {isa = PBXBuildFile; fileRef = 191275762818197800DF7DDD /* WhitePulse.json */; };
 		1912757928181DBC00DF7DDD /* locate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1912757828181DBC00DF7DDD /* locate.json */; };
+		1912757B2818253200DF7DDD /* Launch.json in Resources */ = {isa = PBXBuildFile; fileRef = 1912757A2818253200DF7DDD /* Launch.json */; };
 		19200C562812DC550062F8DF /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19200C552812DC550062F8DF /* WeatherDetail.swift */; };
 		19630A36280CD7A600C90C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A35280CD7A600C90C53 /* AppDelegate.swift */; };
 		19630A38280CD7A600C90C53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A37280CD7A600C90C53 /* SceneDelegate.swift */; };
@@ -103,9 +102,8 @@
 		190407DC28102521008FFE50 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		190E63552814589C003201C9 /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		190E635728145909003201C9 /* WeatherForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastResponse.swift; sourceTree = "<group>"; };
-		191275742818167500DF7DDD /* pulse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pulse.json; sourceTree = "<group>"; };
-		191275762818197800DF7DDD /* WhitePulse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WhitePulse.json; sourceTree = "<group>"; };
 		1912757828181DBC00DF7DDD /* locate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locate.json; sourceTree = "<group>"; };
+		1912757A2818253200DF7DDD /* Launch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Launch.json; sourceTree = "<group>"; };
 		19200C552812DC550062F8DF /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		19630A32280CD7A600C90C53 /* WeatherAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19630A35280CD7A600C90C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -218,8 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				1912757828181DBC00DF7DDD /* locate.json */,
-				191275742818167500DF7DDD /* pulse.json */,
-				191275762818197800DF7DDD /* WhitePulse.json */,
+				1912757A2818253200DF7DDD /* Launch.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -423,11 +420,9 @@
 				19630A42280CD7A900C90C53 /* LaunchScreen.storyboard in Resources */,
 				19004CD928132A5D00B76651 /* AdventPro-Thin.ttf in Resources */,
 				190407BE280DEADA008FFE50 /* Rubik-LightItalic.ttf in Resources */,
-				191275752818167500DF7DDD /* pulse.json in Resources */,
 				190407BF280DEADA008FFE50 /* Rubik-BlackItalic.ttf in Resources */,
 				190407C6280DEADA008FFE50 /* Rubik-MediumItalic.ttf in Resources */,
 				190407C2280DEADA008FFE50 /* Rubik-Medium.ttf in Resources */,
-				191275772818197800DF7DDD /* WhitePulse.json in Resources */,
 				190407BA280DEADA008FFE50 /* Rubik-Regular.ttf in Resources */,
 				190407BB280DEADA008FFE50 /* Rubik-Light.ttf in Resources */,
 				19630A3F280CD7A900C90C53 /* Assets.xcassets in Resources */,
@@ -442,6 +437,7 @@
 				19004CD828132A5D00B76651 /* AdventPro-Bold.ttf in Resources */,
 				19004CDB28132A5D00B76651 /* AdventPro-Medium.ttf in Resources */,
 				190407C3280DEADA008FFE50 /* Rubik-BoldItalic.ttf in Resources */,
+				1912757B2818253200DF7DDD /* Launch.json in Resources */,
 				190407C7280DEADA008FFE50 /* Rubik-Bold.ttf in Resources */,
 				190407C4280DEADA008FFE50 /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				190407BD280DEADA008FFE50 /* Rubik-SemiBoldItalic.ttf in Resources */,

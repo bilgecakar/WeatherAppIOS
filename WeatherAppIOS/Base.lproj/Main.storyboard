@@ -23,12 +23,6 @@
         <array key="AdventPro-SemiBold.ttf">
             <string>AdventPro-SemiBold</string>
         </array>
-        <array key="Rubik-Light.ttf">
-            <string>Rubik-Light</string>
-        </array>
-        <array key="Rubik-Medium.ttf">
-            <string>Rubik-Medium</string>
-        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -39,58 +33,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Application" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SK2-wp-eof">
-                                <rect key="frame" x="100" y="459" width="214" height="76"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get to know your waeher maps and adar preception forecast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cC-fW-L9g">
-                                <rect key="frame" x="32" y="565" width="350" height="45.5"/>
-                                <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-sH-35P">
-                                <rect key="frame" x="100" y="680.5" width="214" height="41"/>
-                                <color key="backgroundColor" name="PrimaryColor"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get Started">
-                                    <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="23"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="tkO-zZ-GSv" kind="presentation" modalPresentationStyle="fullScreen" id="UUA-6b-Z6a"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="IBf-lb-xCG">
-                                <rect key="frame" x="32" y="194" width="350" height="225"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qni-Xc-8ta" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="MyX-qR-lfW"/>
+                                    <constraint firstAttribute="width" constant="200" id="X8V-D7-5Gn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="Launch"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cbZ-sH-35P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="3cw-AV-x9K"/>
-                            <constraint firstItem="cbZ-sH-35P" firstAttribute="top" secondItem="7cC-fW-L9g" secondAttribute="bottom" constant="70" id="Kyi-Mp-Vbf"/>
-                            <constraint firstItem="7cC-fW-L9g" firstAttribute="top" secondItem="SK2-wp-eof" secondAttribute="bottom" constant="30" id="LlV-DF-kkO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IBf-lb-xCG" secondAttribute="trailing" constant="32" id="NuS-oW-ebS"/>
-                            <constraint firstAttribute="trailing" secondItem="7cC-fW-L9g" secondAttribute="trailing" constant="32" id="SDN-YI-ylf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SK2-wp-eof" secondAttribute="trailing" constant="100" id="Slf-ui-AYn"/>
-                            <constraint firstItem="7cC-fW-L9g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Uiw-t8-Agz"/>
-                            <constraint firstItem="IBf-lb-xCG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="WzS-xL-fg4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cbZ-sH-35P" secondAttribute="trailing" constant="100" id="nO6-E9-hpP"/>
-                            <constraint firstItem="SK2-wp-eof" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="rqc-c8-NDR"/>
-                            <constraint firstItem="IBf-lb-xCG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="vQs-oS-DCU"/>
-                            <constraint firstItem="SK2-wp-eof" firstAttribute="top" secondItem="IBf-lb-xCG" secondAttribute="bottom" constant="40" id="zGY-uO-Wvc"/>
+                            <constraint firstItem="Qni-Xc-8ta" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4iO-tK-NLJ"/>
+                            <constraint firstItem="Qni-Xc-8ta" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LNQ-sr-oxi"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="startButton" destination="cbZ-sH-35P" id="hNd-g3-onK"/>
+                        <outlet property="launchAnimated" destination="Qni-Xc-8ta" id="BoC-S4-oVa"/>
+                        <segue destination="tkO-zZ-GSv" kind="presentation" identifier="toHomepage" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="oUF-Lb-G0e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="64"/>
+            <point key="canvasLocation" x="-17" y="64"/>
         </scene>
         <!--Homepage View Controller-->
         <scene sceneID="jwD-rD-mUe">
@@ -392,7 +361,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Banner" width="319.5" height="225"/>
         <image name="Daytime" width="188" height="376"/>
         <image name="cloud" catalog="system" width="128" height="88"/>
         <image name="cloud.sun" catalog="system" width="128" height="95"/>

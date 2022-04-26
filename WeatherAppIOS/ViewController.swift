@@ -6,27 +6,30 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var launchAnimated: AnimationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        animate()
         
-        upadateUI()
+    }
+    
+    
+    func animate()
+    {
+        launchAnimated.play{ (finished) in
+            self.performSegue(withIdentifier: "toHomepage", sender: nil)
+        }
+       
+        
     }
 
-    func upadateUI()
-    {
-        
-        startButton.layer.cornerRadius = 20
-        startButton.layer.shadowOffset = CGSize(width: 0, height: 1)
-        startButton.layer.shadowColor = UIColor.darkGray.cgColor
-        startButton.layer.shadowOpacity = 1
-        startButton.layer.shadowRadius = 5
-        startButton.layer.masksToBounds = false
-             
-    }
+
 
 }
 
