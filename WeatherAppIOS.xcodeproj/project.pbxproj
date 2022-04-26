@@ -41,6 +41,8 @@
 		19127572281814C100DF7DDD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 19127571281814C100DF7DDD /* Lottie */; };
 		1912757928181DBC00DF7DDD /* locate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1912757828181DBC00DF7DDD /* locate.json */; };
 		1912757B2818253200DF7DDD /* Launch.json in Resources */ = {isa = PBXBuildFile; fileRef = 1912757A2818253200DF7DDD /* Launch.json */; };
+		1912757D2818414A00DF7DDD /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912757C2818414A00DF7DDD /* ErrorViewController.swift */; };
+		1912757F2818651400DF7DDD /* cloud.json in Resources */ = {isa = PBXBuildFile; fileRef = 1912757E2818651300DF7DDD /* cloud.json */; };
 		19200C562812DC550062F8DF /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19200C552812DC550062F8DF /* WeatherDetail.swift */; };
 		19630A36280CD7A600C90C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A35280CD7A600C90C53 /* AppDelegate.swift */; };
 		19630A38280CD7A600C90C53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A37280CD7A600C90C53 /* SceneDelegate.swift */; };
@@ -104,6 +106,8 @@
 		190E635728145909003201C9 /* WeatherForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastResponse.swift; sourceTree = "<group>"; };
 		1912757828181DBC00DF7DDD /* locate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locate.json; sourceTree = "<group>"; };
 		1912757A2818253200DF7DDD /* Launch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Launch.json; sourceTree = "<group>"; };
+		1912757C2818414A00DF7DDD /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		1912757E2818651300DF7DDD /* cloud.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cloud.json; sourceTree = "<group>"; };
 		19200C552812DC550062F8DF /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		19630A32280CD7A600C90C53 /* WeatherAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19630A35280CD7A600C90C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				1912757828181DBC00DF7DDD /* locate.json */,
+				1912757E2818651300DF7DDD /* cloud.json */,
 				1912757A2818253200DF7DDD /* Launch.json */,
 			);
 			path = Animations;
@@ -224,6 +229,7 @@
 		19630A29280CD7A600C90C53 = {
 			isa = PBXGroup;
 			children = (
+				1912757C2818414A00DF7DDD /* ErrorViewController.swift */,
 				19630A34280CD7A600C90C53 /* WeatherAppIOS */,
 				19630A4B280CD7A900C90C53 /* WeatherAppIOSTests */,
 				19630A55280CD7A900C90C53 /* WeatherAppIOSUITests */,
@@ -421,6 +427,7 @@
 				19004CD928132A5D00B76651 /* AdventPro-Thin.ttf in Resources */,
 				190407BE280DEADA008FFE50 /* Rubik-LightItalic.ttf in Resources */,
 				190407BF280DEADA008FFE50 /* Rubik-BlackItalic.ttf in Resources */,
+				1912757F2818651400DF7DDD /* cloud.json in Resources */,
 				190407C6280DEADA008FFE50 /* Rubik-MediumItalic.ttf in Resources */,
 				190407C2280DEADA008FFE50 /* Rubik-Medium.ttf in Resources */,
 				190407BA280DEADA008FFE50 /* Rubik-Regular.ttf in Resources */,
@@ -474,6 +481,7 @@
 				190E635828145909003201C9 /* WeatherForecastResponse.swift in Sources */,
 				190407D6280EE910008FFE50 /* HomepagePresenter.swift in Sources */,
 				190407DB280F3BE3008FFE50 /* Weather.swift in Sources */,
+				1912757D2818414A00DF7DDD /* ErrorViewController.swift in Sources */,
 				19630A36280CD7A600C90C53 /* AppDelegate.swift in Sources */,
 				190E63562814589C003201C9 /* WeatherForecast.swift in Sources */,
 				19630A38280CD7A600C90C53 /* SceneDelegate.swift in Sources */,

@@ -353,11 +353,96 @@
                         <outlet property="weatherIconIamge" destination="jC4-Pd-IOd" id="PGy-Oh-ULv"/>
                         <outlet property="weatherTempLabel" destination="Ay2-wF-bMZ" id="yFR-2K-0Fg"/>
                         <outlet property="windyLabel" destination="kdK-Jt-p2V" id="PyQ-dH-WM4"/>
+                        <segue destination="OBr-BR-jn2" kind="show" identifier="toError" id="2HJ-d7-kp1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIT-lU-YNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="63.616071428571423"/>
+        </scene>
+        <!--Error View Controller-->
+        <scene sceneID="jMi-Lg-m4g">
+            <objects>
+                <viewController id="OBr-BR-jn2" customClass="ErrorViewController" customModule="WeatherAppIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p2M-qO-zjz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ig4-AO-4ZU">
+                                <rect key="frame" x="57" y="271" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uh oh, something went wrong" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P58-wt-ANO">
+                                        <rect key="frame" x="32" y="150" width="236" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="AdventPro-SemiBold" family="Advent Pro" pointSize="17"/>
+                                        <color key="textColor" name="PrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a correct city name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYV-Ld-THB">
+                                        <rect key="frame" x="32" y="180.5" width="236" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="16"/>
+                                        <color key="textColor" name="PrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN4-JU-xxK">
+                                        <rect key="frame" x="108" y="250" width="84" height="35"/>
+                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Try Again">
+                                            <fontDescription key="titleFontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tryAgain:" destination="OBr-BR-jn2" eventType="touchUpInside" id="NgQ-vT-8NB"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcv-n5-gba" customClass="AnimationView" customModule="Lottie">
+                                        <rect key="frame" x="30" y="14" width="240" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="cloud"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Wcv-n5-gba" firstAttribute="top" secondItem="Ig4-AO-4ZU" secondAttribute="top" constant="14" id="0pa-6v-3ZK"/>
+                                    <constraint firstAttribute="trailing" secondItem="tYV-Ld-THB" secondAttribute="trailing" constant="32" id="7RC-mI-Mg2"/>
+                                    <constraint firstAttribute="width" constant="300" id="PaL-Kl-NKy"/>
+                                    <constraint firstAttribute="bottom" secondItem="RN4-JU-xxK" secondAttribute="bottom" constant="15" id="S5h-1L-i2J"/>
+                                    <constraint firstItem="P58-wt-ANO" firstAttribute="leading" secondItem="Ig4-AO-4ZU" secondAttribute="leading" constant="32" id="cwi-YT-31f"/>
+                                    <constraint firstItem="P58-wt-ANO" firstAttribute="top" secondItem="Ig4-AO-4ZU" secondAttribute="top" constant="150" id="fhw-L0-WOW"/>
+                                    <constraint firstAttribute="trailing" secondItem="P58-wt-ANO" secondAttribute="trailing" constant="32" id="ixx-GZ-pGa"/>
+                                    <constraint firstItem="Wcv-n5-gba" firstAttribute="leading" secondItem="Ig4-AO-4ZU" secondAttribute="leading" constant="30" id="kII-Vh-wn7"/>
+                                    <constraint firstAttribute="height" constant="300" id="kWp-f9-gxb"/>
+                                    <constraint firstItem="tYV-Ld-THB" firstAttribute="leading" secondItem="Ig4-AO-4ZU" secondAttribute="leading" constant="32" id="kri-qi-jh7"/>
+                                    <constraint firstItem="tYV-Ld-THB" firstAttribute="top" secondItem="P58-wt-ANO" secondAttribute="bottom" constant="10" id="l1m-rm-1cJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wcv-n5-gba" secondAttribute="trailing" constant="30" id="mmD-JL-6Tp"/>
+                                    <constraint firstItem="RN4-JU-xxK" firstAttribute="centerX" secondItem="Ig4-AO-4ZU" secondAttribute="centerX" id="oH9-DL-9ed"/>
+                                    <constraint firstItem="P58-wt-ANO" firstAttribute="top" secondItem="Wcv-n5-gba" secondAttribute="bottom" constant="8" id="t50-VI-gdP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bfQ-TS-dYn"/>
+                        <constraints>
+                            <constraint firstItem="Ig4-AO-4ZU" firstAttribute="centerX" secondItem="p2M-qO-zjz" secondAttribute="centerX" id="HTF-nz-4cr"/>
+                            <constraint firstItem="Ig4-AO-4ZU" firstAttribute="centerY" secondItem="p2M-qO-zjz" secondAttribute="centerY" id="KN2-pc-U9F"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="gIG-t4-u5Y"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="Ig4-AO-4ZU" id="Q28-L1-8f3"/>
+                        <outlet property="cloudAnimation" destination="Wcv-n5-gba" id="dsS-k4-WPJ"/>
+                        <outlet property="tryAgainButton" destination="RN4-JU-xxK" id="DRj-NI-blO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJE-wN-n4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486.9565217391305" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>
@@ -369,7 +454,7 @@
         <image name="umbrella.fill" catalog="system" width="122" height="128"/>
         <image name="wind" catalog="system" width="128" height="103"/>
         <namedColor name="PrimaryColor">
-            <color red="0.17299999296665192" green="0.20399999618530273" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.17254901960784313" green="0.20392156862745098" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

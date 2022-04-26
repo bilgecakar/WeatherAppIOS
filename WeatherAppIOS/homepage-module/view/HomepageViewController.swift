@@ -145,6 +145,7 @@ class HomepageViewController: UIViewController
         
         if search.text == ""
         {
+            performSegue(withIdentifier: "toError", sender: nil)
             print("Hataaa")
             return
         }else
