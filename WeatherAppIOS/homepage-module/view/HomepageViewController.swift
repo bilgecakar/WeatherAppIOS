@@ -101,9 +101,9 @@ class HomepageViewController: UIViewController
             backgroundImage.image = UIImage(named:"NightDay")
         }
         
-        //Deafult London
-        homePresenterObject?.sevenDayWeather(cityName: "London")
-        homePresenterObject?.getCurrentWeather(cityName : "London")
+        //Deafult Oshawa/Canada
+        homePresenterObject?.sevenDayWeather(cityName: "Oshawa")
+        homePresenterObject?.getCurrentWeather(cityName : "Oshawa")
         
     }
     
@@ -140,14 +140,24 @@ class HomepageViewController: UIViewController
     }
     
     @IBAction func searcPressed(_ sender: Any){
-        pulse.play()
-
+       
+       
         
-        if let cityName =  search.text
+        if search.text == ""
         {
-            homePresenterObject?.getCurrentWeather(cityName : cityName)
-            homePresenterObject?.sevenDayWeather(cityName: cityName)
+            print("Hataaa")
+            return
+        }else
+        {
+            pulse.play()
+            if let cityName =  search.text
+            {
+                
+                homePresenterObject?.getCurrentWeather(cityName : cityName)
+                homePresenterObject?.sevenDayWeather(cityName: cityName)
+            }
         }
+        
         
         search.endEditing(true)
     }
@@ -175,7 +185,8 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
             if let date = dateFormatter.date(from: dateString) {
                 
                 dateFormatter.dateFormat = "MMM d, h:mm a"
-                dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+                dateFormatter.locale = Locale(identifier: "en_CA")
+               
                 self.weatherTime = dateFormatter.string(from: date)
                 
                 
