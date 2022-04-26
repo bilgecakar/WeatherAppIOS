@@ -131,17 +131,23 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LKR-cZ-2EE">
-                                <rect key="frame" x="32" y="142.5" width="71" height="105"/>
+                                <rect key="frame" x="32" y="142.5" width="105" height="105"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S5Y-QE-joI">
-                                        <rect key="frame" x="0.0" y="0.0" width="71" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="50"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="hIa-9M-MbY">
-                                                <rect key="frame" x="0.0" y="17" width="16" height="16"/>
-                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
-                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmI-66-C91" customClass="AnimationView" customModule="Lottie">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Sqy-At-zHX"/>
+                                                    <constraint firstAttribute="height" constant="50" id="g74-fX-Fib"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="locate"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-zD-3l6">
-                                                <rect key="frame" x="21" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="55" y="0.0" width="50" height="50"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-SemiBold" family="Advent Pro" pointSize="29"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -149,7 +155,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-7j-xWB" userLabel="Monday  2:45">
-                                        <rect key="frame" x="0.0" y="55" width="71" height="50"/>
+                                        <rect key="frame" x="0.0" y="55" width="105" height="50"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Light" family="Advent Pro" pointSize="18"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -366,7 +372,9 @@
                         <outlet property="cloudLabel" destination="kgw-jP-f85" id="hsd-Zb-Zlg"/>
                         <outlet property="dateLabel" destination="MbC-7j-xWB" id="Os6-It-Dni"/>
                         <outlet property="hourlyWeather" destination="NNX-cx-ze8" id="0Iy-ee-Qbc"/>
+                        <outlet property="pulse" destination="NmI-66-C91" id="G9L-tI-pBH"/>
                         <outlet property="search" destination="Bpy-Hd-5fj" id="IL6-Wo-cWA"/>
+                        <outlet property="searchButonUI" destination="Rbd-Wr-gn0" id="BNl-KK-6Wg"/>
                         <outlet property="shadowOneView" destination="eo5-2S-i0d" id="da5-g0-nwF"/>
                         <outlet property="shadowThreeView" destination="j1O-9z-SfM" id="s77-ms-fun"/>
                         <outlet property="shadowTwoView" destination="IWS-Dw-rs5" id="S1p-B9-obY"/>
@@ -386,7 +394,6 @@
     <resources>
         <image name="Banner" width="319.5" height="225"/>
         <image name="Daytime" width="188" height="376"/>
-        <image name="Pin" width="16" height="16"/>
         <image name="cloud" catalog="system" width="128" height="88"/>
         <image name="cloud.sun" catalog="system" width="128" height="95"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>

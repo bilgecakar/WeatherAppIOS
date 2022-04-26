@@ -16,7 +16,7 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
         
         
         let url = URL(string: "https://api.weatherbit.io/v2.0/current?city=\(cityName)&key=1b45ce95c85f49f489fd96cc081c71c7")!
-   
+        
         
         URLSession.shared.dataTask(with: url){ data, response, error in
             
@@ -35,7 +35,7 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
                     list = answerList
                 }
                 
-             
+                
                 
                 self.homePresenter?.sendToDataPresenter(weatherInfo: list)
             }
@@ -66,7 +66,6 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
                 {
                     listTwo = answerWeatherList
                 }
-                print(listTwo)
                 
                 self.homePresenter?.sendToDataPresenter(weatherInfo: listTwo)
                 

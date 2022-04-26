@@ -7,10 +7,13 @@
 
 import UIKit
 import ViewAnimator
+import Lottie
 
 class HomepageViewController: UIViewController
 {
     
+    @IBOutlet weak var pulse: AnimationView!
+    @IBOutlet weak var searchButonUI: UIButton!
     @IBOutlet weak var weatherIconIamge: UIImageView!
     
     @IBOutlet weak var weatherCollectionView: UICollectionView!
@@ -41,8 +44,7 @@ class HomepageViewController: UIViewController
         weatherCollectionView.delegate = self
         weatherCollectionView.dataSource = self
         HomepageRouter.createModule(ref: self)
-        
-       
+                
     }
     
     func updateUI()
@@ -89,7 +91,7 @@ class HomepageViewController: UIViewController
     override func viewWillAppear(_ animated: Bool) {
         
         let hour = Calendar.current.component(.hour, from: Date())
-        print(hour)
+        
         switch hour {
         case 5...18:
             backgroundImage.image = UIImage(named:"Daytime")
@@ -107,53 +109,50 @@ class HomepageViewController: UIViewController
     
     override func viewDidAppear(_ animated: Bool) {
         
-       
+        
         
         UIView.animate(withDuration: 0.3, animations:  {
             
             
-                self.shadowThreeView.transform = CGAffineTransform(translationX: 0, y: -30)
+            self.shadowThreeView.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
         UIView.animate(withDuration: 0.8, animations:  {
             
-                self.shadowTwoView.transform = CGAffineTransform(translationX: 0, y: -30)
+            self.shadowTwoView.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
         UIView.animate(withDuration: 1.3, animations:  {
             
-      
             
-                self.shadowOneView.transform = CGAffineTransform(translationX: 0, y: -30)
+            
+            self.shadowOneView.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
         UIView.animate(withDuration: 1.8, animations:  {
             
-      
-                self.hourlyWeather.transform = CGAffineTransform(translationX: 0, y: -30)
+            
+            self.hourlyWeather.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
         
-        animate()
         
-            }
+    }
     
     @IBAction func searcPressed(_ sender: Any){
+        pulse.play()
+
         
-        print(search.text!)
-       
         if let cityName =  search.text
         {
             homePresenterObject?.getCurrentWeather(cityName : cityName)
             homePresenterObject?.sevenDayWeather(cityName: cityName)
         }
         
-      
-        
-     
         search.endEditing(true)
     }
     
+
     func animate()
     {
         let animation = AnimationType.zoom(scale: 0.5)
@@ -204,14 +203,8 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
                 self.animate()
             })
         })
-           
-      
         
-       
-      
-        
-        
-            }
+    }
     
 }
 
