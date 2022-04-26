@@ -41,7 +41,7 @@ class HomepageViewController: UIViewController
         weatherCollectionView.dataSource = self
         HomepageRouter.createModule(ref: self)
         
-      
+       
     }
     
     func updateUI()
@@ -102,6 +102,38 @@ class HomepageViewController: UIViewController
         homePresenterObject?.sevenDayWeather(cityName: "London")
         homePresenterObject?.getCurrentWeather(cityName : "London")
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+     
+        
+        
+        UIView.animate(withDuration: 0.3, animations:  {
+            
+            
+                self.shadowThreeView.transform = CGAffineTransform(translationX: 0, y: -40)
+            
+        }, completion: nil)
+        UIView.animate(withDuration: 0.8, animations:  {
+            
+                self.shadowTwoView.transform = CGAffineTransform(translationX: 0, y: -40)
+            
+        }, completion: nil)
+        UIView.animate(withDuration: 1.3, animations:  {
+            
+      
+            
+                self.shadowOneView.transform = CGAffineTransform(translationX: 0, y: -40)
+            
+        }, completion: nil)
+        UIView.animate(withDuration: 1.8, animations:  {
+            
+      
+                self.hourlyWeather.transform = CGAffineTransform(translationX: 0, y: -40)
+            
+        }, completion: nil)
     }
     
     @IBAction func searcPressed(_ sender: Any){
