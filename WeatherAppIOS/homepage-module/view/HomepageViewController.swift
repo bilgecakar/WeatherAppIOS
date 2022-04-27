@@ -93,18 +93,7 @@ class HomepageViewController: UIViewController
         //Deafult Oshawa/Canada
         homePresenterObject?.sevenDayWeather(cityName: "Ottawa")
         homePresenterObject?.getCurrentWeather(cityName : "Ottawa")
-        
-        let hour = Calendar.current.component(.hour, from: Date())
-        
-        switch hour {
-        case 5...18:
-            self.backgroundImage.image = UIImage(named:"Daytime")
-        case 18...24:
-            self.backgroundImage.image = UIImage(named: "NightDay")
-        default:
-            self.backgroundImage.image = UIImage(named:"NightDay")
-        }
-        
+    
         
     }
     
@@ -179,29 +168,31 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
 {
     func sendToDataView(weatherInfo : Array<Weather>) {
         self.weatherList = weatherInfo
+        let date = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        
         
         DispatchQueue.main.async {
-           
             
-            let dateString = self.weatherList[0].ob_time!
+            let timezone = self.weatherList[0].timezone!
+            dateFormatter.timeZone = TimeZone(identifier: timezone)
+            dateFormatter.dateFormat = "MMM d, EEE, hh:mm a"
+            dateFormatter.locale = Locale(identifier: "en")
+            self.weatherTime = dateFormatter.string(from: date)
+            print(timezone)
             
-            dateFormatter.timeZone = TimeZone(identifier: "UTC")
-           
-            if let date = dateFormatter.date(from: dateString) {
-                
-                
-                dateFormatter.dateFormat = "MMM d, yyyy"
-               
-                dateFormatter.locale = Locale(identifier: "en_CA")
-               
-                self.weatherTime = dateFormatter.string(from: date)
-                
-        
-                
-              
+            dateFormatter.dateFormat = "hh"
+            
+            let stringHour = dateFormatter.string(from: date)
+            
+            let hour = Int(stringHour)!
+            
+            switch hour {
+            case 5...18:
+                self.backgroundImage.image = UIImage(named:"Daytime")
+            case 18...24:
+                self.backgroundImage.image = UIImage(named: "NightDay")
+            default:
+                self.backgroundImage.image = UIImage(named:"NightDay")
             }
             
             self.cityNameLabel.text = self.weatherList[0].city_name!
