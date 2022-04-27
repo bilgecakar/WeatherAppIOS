@@ -93,8 +93,8 @@ class HomepageViewController: UIViewController
     override func viewWillAppear(_ animated: Bool) {
         
         //Deafult Oshawa/Canada
-        homePresenterObject?.sevenDayWeather(cityName: "Istanbul")
-        homePresenterObject?.getCurrentWeather(cityName : "Istanbul")
+        homePresenterObject?.sevenDayWeather(cityName: "istanbul")
+        homePresenterObject?.getCurrentWeather(cityName : "istanbul")
     
         
     }
@@ -133,9 +133,12 @@ class HomepageViewController: UIViewController
     
     @IBAction func searcPressed(_ sender: Any){
        
-       
+        let lowCities = cities.map{
+            $0.lowercased()
+        }
+        print(cities[113326])
         
-        if search.text == "" || search.text!.count < 4  || search.text!.count > 30 || cities.contains(search.text!) == false
+        if search.text == ""  || lowCities.contains(search.text!.lowercased()) == false
 
         {
             performSegue(withIdentifier: "toError", sender: nil)
@@ -146,7 +149,7 @@ class HomepageViewController: UIViewController
         {
             
             pulse.play()
-            if let cityName =  search.text
+            if let cityName =  search.text?.lowercased()
             {
                 
                 homePresenterObject?.getCurrentWeather(cityName : cityName)
@@ -165,6 +168,7 @@ class HomepageViewController: UIViewController
         UIView.animate(views : weatherCollectionView.visibleCells, animations: [animation])
         
     }
+    
     
     func openCSV(fileName:String, fileType: String)-> String!{
        guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
@@ -272,7 +276,7 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
             self.cityNameLabel.text = self.weatherList[0].city_name!
             self.weatherTempLabel.text = "\(self.weatherList[0].temp!)°"
             self.weatherDesc.text = self.weatherList[0].weather?.description ?? ""
-            self.sunsetLabel.text = self.weatherList[0].sunset!
+            self.sunsetLabel.text = self.weatherList[0].sunrise!
             self.windyLabel.text = String(format: "%0.2f", self.weatherList[0].wind_spd!) + "m/s"
             self.cloudLabel.text = "\(self.weatherList[0].clouds!) %"
             self.dateLabel.text = self.weatherTime
@@ -320,6 +324,8 @@ extension HomepageViewController : UITextFieldDelegate
     func textFieldDidEndEditing(_ textField: UITextField) {
         search.text = ""
     }
+    
+   
 }
 
 extension HomepageViewController : UICollectionViewDelegate, UICollectionViewDataSource
