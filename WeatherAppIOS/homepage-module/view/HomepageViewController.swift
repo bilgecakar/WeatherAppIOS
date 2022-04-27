@@ -32,6 +32,7 @@ class HomepageViewController: UIViewController
     var weatherList = [Weather]()
     var weatherTime : String =  ""
     var weatherForecast = [WeatherForecast]()
+    var cities = [String]()
    
     
     var homePresenterObject : ViewToPresenterHomepageProtocol?
@@ -84,6 +85,7 @@ class HomepageViewController: UIViewController
         let cellWidth = (width-20) / 3
         collectionDesign.itemSize = CGSize(width: cellWidth, height: cellWidth*1.5)
         weatherCollectionView.collectionViewLayout = collectionDesign
+        parseCSV()
         
     }
     
@@ -133,7 +135,7 @@ class HomepageViewController: UIViewController
        
        
         
-        if search.text == "" || search.text!.count < 4  || search.text!.count > 30
+        if search.text == "" || search.text!.count < 4  || search.text!.count > 30 || cities.contains(search.text!) == false
 
         {
             performSegue(withIdentifier: "toError", sender: nil)
@@ -142,6 +144,7 @@ class HomepageViewController: UIViewController
             return
         }else
         {
+            
             pulse.play()
             if let cityName =  search.text
             {
@@ -162,6 +165,77 @@ class HomepageViewController: UIViewController
         UIView.animate(views : weatherCollectionView.visibleCells, animations: [animation])
         
     }
+    
+    func openCSV(fileName:String, fileType: String)-> String!{
+       guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
+           else {
+               return nil
+       }
+       do {
+           let contents = try String(contentsOfFile: filepath, encoding: .utf8)
+
+           return contents
+       } catch {
+           print("File Read Error for file \(filepath)")
+           return nil
+       }
+   }
+    
+    func parseCSV(){
+
+        let dataString: String! = openCSV(fileName: "cities_full", fileType: "csv")
+        var items: [(String, String, String)] = []
+        let lines: [String] = dataString.components(separatedBy: NSCharacterSet.newlines) as [String]
+
+        for line in lines {
+           var values: [String] = []
+           if line != "" {
+               if line.range(of: "\"") != nil {
+                   var textToScan:String = line
+                   var value:String?
+                   var textScanner:Scanner = Scanner(string: textToScan)
+                while !textScanner.isAtEnd {
+                       if (textScanner.string as NSString).substring(to: 1) == "\"" {
+
+
+                           textScanner.currentIndex = textScanner.string.index(after: textScanner.currentIndex)
+
+                           value = textScanner.scanUpToString("\"")
+                           textScanner.currentIndex = textScanner.string.index(after: textScanner.currentIndex)
+                       } else {
+                           value = textScanner.scanUpToString(",")
+                       }
+
+                        values.append(value ?? ""  as String)
+
+                    if !textScanner.isAtEnd{
+                            let indexPlusOne = textScanner.string.index(after: textScanner.currentIndex)
+
+                        textToScan = String(textScanner.string[indexPlusOne...])
+                        } else {
+                            textToScan = ""
+                        }
+                        textScanner = Scanner(string: textToScan)
+                   }
+
+                   // For a line without double quotes, we can simply separate the string
+                   // by using the delimiter (e.g. comma)
+               } else  {
+                   values = line.components(separatedBy: ",")
+               }
+
+               // Put the values into the tuple and add it to the items array
+               let item = (values[0], values[1], values[2])
+               items.append(item)
+              
+               cities.append(item.1)
+               
+            }
+        }
+
+    }
+    
+    
     
 }
 extension HomepageViewController : PresenterToViewHomepageProtocol

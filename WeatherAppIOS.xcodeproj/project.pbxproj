@@ -54,6 +54,7 @@
 		19630A57280CD7A900C90C53 /* WeatherAppIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A56280CD7A900C90C53 /* WeatherAppIOSUITests.swift */; };
 		19630A59280CD7A900C90C53 /* WeatherAppIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A58280CD7A900C90C53 /* WeatherAppIOSUITestsLaunchTests.swift */; };
 		19630A8B280D44E500C90C53 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19630A8A280D44E500C90C53 /* HomepageViewController.swift */; };
+		199EE44D2819332C00F9B7C1 /* cities_full.csv in Resources */ = {isa = PBXBuildFile; fileRef = 199EE44C2819332C00F9B7C1 /* cities_full.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		19630A56280CD7A900C90C53 /* WeatherAppIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppIOSUITests.swift; sourceTree = "<group>"; };
 		19630A58280CD7A900C90C53 /* WeatherAppIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		19630A8A280D44E500C90C53 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		199EE44C2819332C00F9B7C1 /* cities_full.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities_full.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 		19630A34280CD7A600C90C53 /* WeatherAppIOS */ = {
 			isa = PBXGroup;
 			children = (
+				199EE44B2819331600F9B7C1 /* Cities */,
 				191275732818165E00DF7DDD /* Animations */,
 				190407D9280F3BBE008FFE50 /* Entity */,
 				190407C8280EE636008FFE50 /* homepage-module */,
@@ -309,6 +312,14 @@
 				190407AF280DEAD9008FFE50 /* Rubik-SemiBoldItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		199EE44B2819331600F9B7C1 /* Cities */ = {
+			isa = PBXGroup;
+			children = (
+				199EE44C2819332C00F9B7C1 /* cities_full.csv */,
+			);
+			path = Cities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +438,7 @@
 				19004CD928132A5D00B76651 /* AdventPro-Thin.ttf in Resources */,
 				190407BE280DEADA008FFE50 /* Rubik-LightItalic.ttf in Resources */,
 				190407BF280DEADA008FFE50 /* Rubik-BlackItalic.ttf in Resources */,
+				199EE44D2819332C00F9B7C1 /* cities_full.csv in Resources */,
 				1912757F2818651400DF7DDD /* cloud.json in Resources */,
 				190407C6280DEADA008FFE50 /* Rubik-MediumItalic.ttf in Resources */,
 				190407C2280DEADA008FFE50 /* Rubik-Medium.ttf in Resources */,
