@@ -222,13 +222,12 @@ class HomepageViewController: UIViewController
                         textScanner = Scanner(string: textToScan)
                    }
 
-                   // For a line without double quotes, we can simply separate the string
-                   // by using the delimiter (e.g. comma)
+                 
                } else  {
                    values = line.components(separatedBy: ",")
                }
 
-               // Put the values into the tuple and add it to the items array
+               
                let item = (values[0], values[1], values[2])
                items.append(item)
               
@@ -258,11 +257,13 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
             self.weatherTime = dateFormatter.string(from: date)
             print(timezone)
             
-            dateFormatter.dateFormat = "hh"
+            dateFormatter.dateFormat = "HH"
+            
             
             let stringHour = dateFormatter.string(from: date)
             
             let hour = Int(stringHour)!
+            print(hour)
             
             switch hour {
             case 5...18:
