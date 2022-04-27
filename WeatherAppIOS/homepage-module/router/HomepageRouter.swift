@@ -18,5 +18,4 @@ class HomepageRouter : PresenterToRouterHomepageProtocol
         ref.homePresenterObject?.homeInteractor?.homePresenter = presenter
     }
     
-    
 }

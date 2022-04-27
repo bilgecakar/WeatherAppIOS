@@ -21,7 +21,6 @@ class HomepagePresenter : ViewToPresenterHomepageProtocol
         homeInteractor?.sevenDayWeather(cityName : cityName)
     }
     
-    
 }
 
 extension HomepagePresenter : InteractorToPresenterHomepageProtocol

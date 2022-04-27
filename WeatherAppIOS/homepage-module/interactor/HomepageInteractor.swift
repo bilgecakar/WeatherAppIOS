@@ -14,17 +14,14 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
     
     func getCurrentWeather(cityName : String) {
         
-        let replaced = cityName.replacingOccurrences(of: " ", with: "_")
-        let city = replaced.folding(options: .diacriticInsensitive, locale: nil)
-        print(city)
-        let url = URL(string: "https://api.weatherbit.io/v2.0/current?city=\(city)&key=1b45ce95c85f49f489fd96cc081c71c7")!
         
+        let url = URL(string: "https://api.weatherbit.io/v2.0/current?city=\(cityName)&key=1b45ce95c85f49f489fd96cc081c71c7")!
         
         URLSession.shared.dataTask(with: url){ data, response, error in
             
             if error != nil || data == nil
             {
-                print("Hata")
+                print("Error")
                 return
             }
             
@@ -36,8 +33,6 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
                 {
                     list = answerList
                 }
-                
-                
                 
                 self.homePresenter?.sendToDataPresenter(weatherInfo: list)
             }
@@ -52,15 +47,13 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
     
     func sevenDayWeather(cityName : String) {
         
-        let replaced = cityName.replacingOccurrences(of: " ", with: "_")
-        let city = replaced.folding(options: .diacriticInsensitive, locale: nil)
-       
-        let url = URL(string: "https://api.weatherbit.io/v2.0/forecast/daily?city=\(city)&key=1b45ce95c85f49f489fd96cc081c71c7")!
+        let url = URL(string: "https://api.weatherbit.io/v2.0/forecast/daily?city=\(cityName)&key=1b45ce95c85f49f489fd96cc081c71c7")!
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             if error != nil || data == nil
             {
-                print("Hata")
+                print("Error")
                 return
             }
             

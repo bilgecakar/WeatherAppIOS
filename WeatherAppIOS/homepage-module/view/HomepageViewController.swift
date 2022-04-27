@@ -12,7 +12,7 @@ import Lottie
 class HomepageViewController: UIViewController
 {
     
-    @IBOutlet weak var pulse: AnimationView!
+    @IBOutlet weak var location: AnimationView!
     @IBOutlet weak var searchButonUI: UIButton!
     @IBOutlet weak var weatherIconIamge: UIImageView!
     @IBOutlet weak var weatherCollectionView: UICollectionView!
@@ -21,7 +21,7 @@ class HomepageViewController: UIViewController
     @IBOutlet weak var shadowThreeView: UIView!
     @IBOutlet weak var shadowTwoView: UIView!
     @IBOutlet weak var shadowOneView: UIView!
-    @IBOutlet weak var hourlyWeather: UIView!
+    @IBOutlet weak var dailyWeather: UIView!
     @IBOutlet weak var cloudLabel: UILabel!
     @IBOutlet weak var windyLabel: UILabel!
     @IBOutlet weak var sunsetLabel: UILabel!
@@ -29,6 +29,7 @@ class HomepageViewController: UIViewController
     @IBOutlet weak var weatherDesc: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var search: UITextField!
+    
     var weatherList = [Weather]()
     var weatherTime : String =  ""
     var weatherForecast = [WeatherForecast]()
@@ -39,20 +40,24 @@ class HomepageViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        
         search.delegate = self
         weatherCollectionView.delegate = self
         weatherCollectionView.dataSource = self
+        
+        updateUI()
+        
         HomepageRouter.createModule(ref: self)
-        pulse.play()
+        
+        location.play()
                 
     }
     
     func updateUI()
     {
-        hourlyWeather.layer.masksToBounds = false
-        hourlyWeather.layer.cornerRadius = 50
-        hourlyWeather.clipsToBounds = true
+        dailyWeather.layer.masksToBounds = false
+        dailyWeather.layer.cornerRadius = 50
+        dailyWeather.clipsToBounds = true
         
         shadowOneView.layer.masksToBounds = false
         shadowOneView.layer.cornerRadius = 45
@@ -62,11 +67,11 @@ class HomepageViewController: UIViewController
         shadowTwoView.layer.cornerRadius = 40
         shadowTwoView.clipsToBounds = true
         
-        
         shadowThreeView.layer.masksToBounds = false
         shadowThreeView.layer.cornerRadius = 35
         shadowThreeView.clipsToBounds = true
         
+        //Seach textfield UI
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: search.frame.height - 1, width: search.frame.width, height: 1.0)
         bottomLine.backgroundColor = UIColor.white.cgColor
@@ -77,6 +82,7 @@ class HomepageViewController: UIViewController
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray3]
         )
         
+        //Collectionview design
         let collectionDesign = UICollectionViewFlowLayout()
         collectionDesign.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         collectionDesign.minimumInteritemSpacing = 5
@@ -92,20 +98,18 @@ class HomepageViewController: UIViewController
     
     override func viewWillAppear(_ animated: Bool) {
         
-        //Deafult Oshawa/Canada
+        //Deafult Istanbul/Turkey
         homePresenterObject?.sevenDayWeather(cityName: "istanbul")
         homePresenterObject?.getCurrentWeather(cityName : "istanbul")
-    
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        
+        //Animations
         
         UIView.animate(withDuration: 0.3, animations:  {
-            
-            
+    
             self.shadowThreeView.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
@@ -116,15 +120,12 @@ class HomepageViewController: UIViewController
         }, completion: nil)
         UIView.animate(withDuration: 1.3, animations:  {
             
-            
-            
             self.shadowOneView.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
         UIView.animate(withDuration: 1.8, animations:  {
-            
-            
-            self.hourlyWeather.transform = CGAffineTransform(translationX: 0, y: -30)
+
+            self.dailyWeather.transform = CGAffineTransform(translationX: 0, y: -30)
             
         }, completion: nil)
         
@@ -132,44 +133,57 @@ class HomepageViewController: UIViewController
     }
     
     @IBAction func searcPressed(_ sender: Any){
-       
+        
         let lowCities = cities.map{
             $0.lowercased()
         }
-        print(cities[113326])
         
-        if search.text == ""  || lowCities.contains(search.text!.lowercased()) == false
+        var city = ""
+       
+        if search.text == ""  || lowCities.contains((search.text?.lowercased())!) == false
 
         {
             performSegue(withIdentifier: "toError", sender: nil)
             search.text = ""
-            
             return
+            
         }else
         {
-            
-            pulse.play()
-            if let cityName =  search.text?.lowercased()
+            if let searching =  search.text
             {
-                
-                homePresenterObject?.getCurrentWeather(cityName : cityName)
-                homePresenterObject?.sevenDayWeather(cityName: cityName)
+                city =  convertEnglishCharacter(txt: searching)
             }
+            location.play()
+            homePresenterObject?.getCurrentWeather(cityName : city)
+            homePresenterObject?.sevenDayWeather(cityName: city)
+            
         }
-        
         
         search.endEditing(true)
     }
     
 
-    func animate()
+    func collectionviewAnimation()
     {
+        //Collectionview animation
         let animation = AnimationType.zoom(scale: 0.5)
         UIView.animate(views : weatherCollectionView.visibleCells, animations: [animation])
         
     }
     
+    func convertEnglishCharacter(txt : String) -> String
+    {
+        //Convert english character for url
+        //Example: city = zürich -> zurich
+        //city name = New York City -> new_york_city
+        let nonSpace = txt.replacingOccurrences(of: " ", with: "_")
+        let justEnglishString = nonSpace.folding(options: .diacriticInsensitive, locale: nil)
+        
+        return justEnglishString.lowercased()
+        
+    }
     
+    //Cities's names in csv file so searching in csv file
     func openCSV(fileName:String, fileType: String)-> String!{
        guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
            else {
@@ -255,15 +269,10 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
             dateFormatter.dateFormat = "MMM d, EEE, hh:mm a"
             dateFormatter.locale = Locale(identifier: "en")
             self.weatherTime = dateFormatter.string(from: date)
-            print(timezone)
             
             dateFormatter.dateFormat = "HH"
-            
-            
             let stringHour = dateFormatter.string(from: date)
-            
             let hour = Int(stringHour)!
-            print(hour)
             
             switch hour {
             case 5...18:
@@ -293,7 +302,8 @@ extension HomepageViewController : PresenterToViewHomepageProtocol
                                         {
             self.weatherCollectionView.reloadData()
             self.weatherCollectionView.performBatchUpdates({
-                self.animate()
+            self.collectionviewAnimation()
+                
             })
         })
         
@@ -326,12 +336,12 @@ extension HomepageViewController : UITextFieldDelegate
         search.text = ""
     }
     
-   
 }
 
 extension HomepageViewController : UICollectionViewDelegate, UICollectionViewDataSource
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //Just in 3 day
         return  weatherForecast.count - 13
     }
     
@@ -347,7 +357,7 @@ extension HomepageViewController : UICollectionViewDelegate, UICollectionViewDat
         if let date = dateFormatter.date(from: dateString) {
             
             dateFormatter.dateFormat = "MMM d"
-            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            dateFormatter.locale = Locale(identifier: "en")
             cell.weatherDay.text = dateFormatter.string(from: date)
             
         }

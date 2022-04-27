@@ -12,9 +12,5 @@ class WeatherForecast : Codable
     var datetime : String?
     var weather : WeatherDetail?
     
-    init(temp : Double, datetime : String)
-    {
-        self.temp = temp
-        self.datetime = datetime
-    }
+    private init(){}
 }

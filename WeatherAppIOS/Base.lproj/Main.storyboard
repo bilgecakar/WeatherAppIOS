@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="width" constant="200" id="X8V-D7-5Gn"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="Launch"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="launch"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -339,9 +339,9 @@
                         <outlet property="backgroundImage" destination="FIt-Tx-7Vu" id="jaU-Pq-nS4"/>
                         <outlet property="cityNameLabel" destination="JvT-zD-3l6" id="ujJ-qx-4l2"/>
                         <outlet property="cloudLabel" destination="kgw-jP-f85" id="hsd-Zb-Zlg"/>
+                        <outlet property="dailyWeather" destination="NNX-cx-ze8" id="0Iy-ee-Qbc"/>
                         <outlet property="dateLabel" destination="MbC-7j-xWB" id="Os6-It-Dni"/>
-                        <outlet property="hourlyWeather" destination="NNX-cx-ze8" id="0Iy-ee-Qbc"/>
-                        <outlet property="pulse" destination="NmI-66-C91" id="G9L-tI-pBH"/>
+                        <outlet property="location" destination="NmI-66-C91" id="JKI-vQ-ptR"/>
                         <outlet property="search" destination="Bpy-Hd-5fj" id="IL6-Wo-cWA"/>
                         <outlet property="searchButonUI" destination="Rbd-Wr-gn0" id="BNl-KK-6Wg"/>
                         <outlet property="shadowOneView" destination="eo5-2S-i0d" id="da5-g0-nwF"/>
@@ -454,7 +454,7 @@
         <image name="umbrella.fill" catalog="system" width="122" height="128"/>
         <image name="wind" catalog="system" width="128" height="103"/>
         <namedColor name="PrimaryColor">
-            <color red="0.17254901960784313" green="0.20392156862745098" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.17299999296665192" green="0.20399999618530273" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

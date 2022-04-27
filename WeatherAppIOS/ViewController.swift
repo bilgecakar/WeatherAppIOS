@@ -9,27 +9,23 @@ import UIKit
 import Lottie
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var launchAnimated: AnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        animate()
+        
+        launchAnimate()
         
     }
     
-    
-    func animate()
+    func launchAnimate()
     {
         launchAnimated.play{ (finished) in
             self.performSegue(withIdentifier: "toHomepage", sender: nil)
         }
-       
         
     }
-
-
-
+    
 }
 
