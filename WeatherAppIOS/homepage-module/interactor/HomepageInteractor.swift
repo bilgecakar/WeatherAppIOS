@@ -14,8 +14,8 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
     
     func getCurrentWeather(cityName : String) {
         
-        
-        let url = URL(string: "https://api.weatherbit.io/v2.0/current?city=\(cityName)&key=1b45ce95c85f49f489fd96cc081c71c7")!
+        let replaced = cityName.replacingOccurrences(of: " ", with: "_")
+        let url = URL(string: "https://api.weatherbit.io/v2.0/current?city=\(replaced)&key=1b45ce95c85f49f489fd96cc081c71c7")!
         
         
         URLSession.shared.dataTask(with: url){ data, response, error in
@@ -49,7 +49,9 @@ class HomepageInteractor : PresenterToInteractorHomepageProtocol
     }
     
     func sevenDayWeather(cityName : String) {
-        let url = URL(string: "https://api.weatherbit.io/v2.0/forecast/daily?city=\(cityName)&key=1b45ce95c85f49f489fd96cc081c71c7")!
+        
+        let replaced = cityName.replacingOccurrences(of: " ", with: "_")
+        let url = URL(string: "https://api.weatherbit.io/v2.0/forecast/daily?city=\(replaced)&key=1b45ce95c85f49f489fd96cc081c71c7")!
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             if error != nil || data == nil

@@ -93,8 +93,8 @@ class HomepageViewController: UIViewController
     override func viewWillAppear(_ animated: Bool) {
         
         //Deafult Oshawa/Canada
-        homePresenterObject?.sevenDayWeather(cityName: "Ottawa")
-        homePresenterObject?.getCurrentWeather(cityName : "Ottawa")
+        homePresenterObject?.sevenDayWeather(cityName: "Istanbul")
+        homePresenterObject?.getCurrentWeather(cityName : "Istanbul")
     
         
     }
